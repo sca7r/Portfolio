@@ -30,10 +30,10 @@ export default function About() {
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-blue-600 dark:text-blue-300 mb-4">Passions & Hobbies</h2>
           <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-            <li>🏃‍♂️ Trekking across Indian mountain ranges</li>
-            <li>⚽ Competing in local football leagues (Kreis A-4 Klasse)</li>
+            <li>🏃‍♂️ Trekking across mountain ranges</li>
+            <li>⚽ Competing in football leagues (Kreis A-4 Klasse)</li>
             <li>📸 Capturing tech moments through photography</li>
-            <li>🍳 Experimenting with Indian and German recipes</li>
+            <li>🍳 Experimenting with Indian recipes</li>
             <li>🎮 Enjoying immersive VR driving simulators</li>
           </ul>
         </section>
