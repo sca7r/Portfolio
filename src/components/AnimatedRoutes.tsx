@@ -1,21 +1,27 @@
 // src/components/AnimatedRoutes.tsx
-import { Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import About from '../pages/About';
-import Contact from '../pages/Contact';
-
+import ProjectDetails from '../pages/ProjectDetails';
+import Adapt from '../pages/projects/Adapt';
+import MultiSensor from '../pages/projects/MultiSensor';
+import Trajectory from '../pages/projects/Trajectory';
+import Aeb from '../pages/projects/Aeb';
 export default function AnimatedRoutes() {
-  const location = useLocation();
-
   return (
-    <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </AnimatePresence>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/projects/:id" element={<ProjectDetails />} />
+      <Route path="/projects/adapt" element={<Adapt />} />
+      <Route path="/projects/multisensor" element={<MultiSensor />} />
+      <Route path="/projects/trajectory" element={<Trajectory />} />
+      <Route path="/projects/aeb" element={<Aeb />} />
+    </Routes>
   );
 }
+
+
+
+
 
