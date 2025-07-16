@@ -7,6 +7,7 @@ import Adapt from '../pages/projects/Adapt';
 import MultiSensor from '../pages/projects/MultiSensor';
 import Trajectory from '../pages/projects/Trajectory';
 import Aeb from '../pages/projects/Aeb';
+import Contact from '../pages/Contact';
 export default function AnimatedRoutes() {
   return (
     <Routes>
@@ -17,6 +18,7 @@ export default function AnimatedRoutes() {
       <Route path="/projects/multisensor" element={<MultiSensor />} />
       <Route path="/projects/trajectory" element={<Trajectory />} />
       <Route path="/projects/aeb" element={<Aeb />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 }

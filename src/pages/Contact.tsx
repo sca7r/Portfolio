@@ -21,10 +21,10 @@ export default function Contact() {
           <p className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-200">📞 +49 176 32793881</p>
 
           <div className="flex justify-center gap-6 mt-6">
-            <a href="https://www.linkedin.com/in/harshawardhanpatil/" target="_blank" className="text-blue-600 dark:text-blue-400 hover:underline">
+            <a href="https://www.linkedin.com/in/ha7shpatil/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
               LinkedIn
             </a>
-            <a href="https://github.com/ha7sh" target="_blank" className="text-gray-800 dark:text-gray-200 hover:underline">
+            <a href="https://github.com/sca7r" target="_blank" rel="noopener noreferrer" className="text-gray-800 dark:text-gray-200 hover:underline">
               GitHub
             </a>
             <a href="/resume/Harshawardhan_Patil_Resume.pdf" download className="text-green-700 dark:text-green-400 hover:underline">
