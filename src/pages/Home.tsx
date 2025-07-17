@@ -1,8 +1,8 @@
 // src/pages/Home.tsx
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import MoreAboutMeButton from '../components/MoreAboutMeButton';
+import finalImage from '../assets/final.jpg';
 
 const projects = [
   {
@@ -31,7 +31,7 @@ const projects = [
     summary: 'Real-time braking system based on LiDAR scans and safety evaluation.',
     tech: 'Python, Sensor Fusion, Real-Time',
     details: 'Designed a braking controller using Python and LiDAR-based obstacle detection. Real-time logging and evaluation implemented for validation and test scenarios.',
-    link: '/projects/aeb',
+    link: '/projects/braking',
   },
 ];
 
@@ -64,26 +64,36 @@ export default function Home() {
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Intro */}
         <section className="mb-16 text-center">
-          <img
-            src="/harsh-profile.jpg"
-            alt="Harshawardhan Patil"
-            className="w-full max-w-md h-auto mx-auto mb-6 shadow-md border-4 border-blue-500 dark:border-blue-300 object-cover"
-          />
-          <h1 className="text-5xl font-bold text-blue-700 dark:text-blue-400 mb-4">Harshawardhan Patil</h1>
-          <h2 className="text-2xl text-gray-600 dark:text-gray-300">Mechanical Engineer | Autonomous Driving Specialist</h2>
-          <p className="mt-6 text-lg text-gray-700 dark:text-gray-300">
+        <h1 className="text-5xl font-bold text-blue-700 dark:text-blue-400 mb-4">Harshawardhan Patil</h1>
+          <h2 className="text-2xl text-gray-600 dark:text-gray-300">Mechanical Engineer | Autonomous Systems engineer</h2>
+          <p className="mt-6 mb-20 text-lg text-gray-700 dark:text-gray-300">
             Passionate about engineering innovative mobility solutions and driving the future of autonomous technologies.
           </p>
+          
+          
+          <img
+          src={finalImage}
+          alt="Harshawardhan Patil"
+          className="mt -10 mb -10 w-full max-w-6xl h-auto mx-auto mb-6 shadow-lg border-4 border-blue-100 dark:border-blue-300 object-cover rounded-xl"
+        />
+        
+   
+          
         </section>
-
         {/* About Me */}
         <section className="mb-16">
           <h3 className="text-3xl font-semibold text-blue-600 dark:text-blue-300 mb-4">About Me</h3>
           <p className="text-gray-700 dark:text-gray-300">
-            I'm a Master's student in Autonomous Driving at Hochschule Coburg and currently working on my Master's Thesis at Daimler AG. My core strengths lie in autonomous navigation, trajectory planning, and sensor fusion.
+            Hi, I'm Harshawardhan
+
+I'm a mechanical engineer turned autonomous systems enthusiast, building smarter, safer, and more efficient vehicles. Currently working on wiring optimization for zonal E/E architectures at Daimler AG, and diving deep into In-Vehicle communication, SIL and AUTOSAR.
+
+When I'm not coding in Python or tuning deep learning models, you can find me prepping for the Ironman triathlon, trekking mountain trails, or chasing footballs in the German Kreis A-League. I'm a hands-on tinkerer who loves drones, cameras, and anything with an engine — from cars to fighter jets.
+
+Fascinated by the blend of mechanics and intelligence, I aim to engineer systems that move with purpose. Always open to collaborate, learn, and build.
           </p>
         </section>
         <MoreAboutMeButton />
