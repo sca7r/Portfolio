@@ -69,9 +69,6 @@ export default function Home() {
           <p className="mt-6 mb-20 text-lg text-gray-700 dark:text-gray-300">
             Passionate about engineering innovative mobility solutions and driving the future of autonomous technologies.
           </p>
-          
-
-
 
           <img
             src={finalImage}
@@ -133,46 +130,47 @@ export default function Home() {
 
         {/* Projects */}
         <section className="mb-16">
-          <h3 className="text-3xl font-semibold text-blue-600 dark:text-blue-300 mb-6">Projects</h3>
+          <h3 className="text-3xl font-semibold text-blue-600 dark:text-blue-300 mb-6 mt-20">Projects</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md cursor-pointer hover:scale-[1.02] transition-transform"
+                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md cursor-pointer hover:scale-[1.02] transition-transform border border-blue-200 dark:border-blue-700 hover:bg-blue-50 dark:hover:bg-blue-900"
                 onClick={() => navigate(project.link)}
               >
-                <h4 className="text-xl font-bold mb-1 text-blue-700 dark:text-blue-300">{project.title}</h4>
+                <h4 className="text-xl font-bold mb-1 text-blue-700 dark:text-blue-300 underline">{project.title}</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">{project.summary}</p>
-                <p className="text-sm text-blue-500 mb-2">{project.tech}</p>
+                <p className="text-sm text-blue-500 mb-2 italic">{project.tech}</p>
+                <p className="text-sm text-blue-600 dark:text-blue-300 mt-2">Click to explore more →</p>
               </div>
             ))}
           </div>
+          
+                    <section className="mb-16">
+            <h2 className="text-3xl font-semibold text-blue-700 dark:text-blue-400 mb-6 mt-20">Certifications & Language Skills</h2>
+            <div className="flex flex-col md:flex-row justify-center items-start gap-10">
+              <div className="flex-1">
+                <h3 className="text-xl font-medium text-gray-700 dark:text-gray-200 mb-4">Certifications</h3>
+                <ul className="list-disc list-inside text-left text-gray-600 dark:text-gray-300">
+                  <li>Certified ROS Developer – The Construct</li>
+                  <li>Deep Learning Specialization – Coursera</li>
+                  <li>Autonomous Driving Engineer Nanodegree – Udacity</li>
+                  <li>Advanced C++ Programming – Udemy</li>
+                  <li>Introduction to Self-Driving Cars – Coursera</li>
+                </ul>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-medium text-gray-700 dark:text-gray-200 mb-4">Language Skills</h3>
+                <ul className="list-disc list-inside text-left text-gray-600 dark:text-gray-300">
+                  <li>English – Fluent (C2)</li>
+                  <li>German – Intermediate (A2–B1)</li>
+                  <li>Hindi – Native</li>
+                  <li>Marathi – Native</li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </section>
-        
-               <section className="mb-16">
-  <h2 className="text-3xl font-semibold text-blue-700 dark:text-blue-400 mb-6">Certifications & Language Skills</h2>
-  <div className="flex flex-col md:flex-row justify-center items-start gap-10">
-    <div className="flex-1">
-      <h3 className="text-xl font-medium text-gray-700 dark:text-gray-200 mb-4">Certifications</h3>
-      <ul className="list-disc list-inside text-left text-gray-600 dark:text-gray-300">
-        <li>Certified ROS Developer – The Construct</li>
-        <li>Deep Learning Specialization – Coursera</li>
-        <li>Autonomous Driving Engineer Nanodegree – Udacity</li>
-        <li>Advanced C++ Programming – Udemy</li>
-        <li>Introduction to Self-Driving Cars – Coursera</li>
-      </ul>
-    </div>
-    <div className="flex-1">
-      <h3 className="text-xl font-medium text-gray-700 dark:text-gray-200 mb-4">Language Skills</h3>
-      <ul className="list-disc list-inside text-left text-gray-600 dark:text-gray-300">
-        <li>English – Fluent (C2)</li>
-        <li>German – Intermediate (A2–B1)</li>
-        <li>Hindi – Native</li>
-        <li>Marathi – Native</li>
-      </ul>
-    </div>
-  </div>
-</section>
 
         <section className="text-center mt-16">
           <p className="text-gray-500 dark:text-gray-400 text-sm">
