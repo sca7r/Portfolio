@@ -3,35 +3,32 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import MoreAboutMeButton from '../components/MoreAboutMeButton';
 import finalImage from '../assets/final.jpg';
+import Media1Video from '../assets/Media1.mp4';
 
 const projects = [
   {
     title: 'ADAPT – Autonomous Driving and Parking Technology',
-    summary: 'Smart infrastructure and autonomous robot for efficient parking using V2X communication.',
-    tech: 'Jetson, LiDAR, V2X, Grid Maps',
-    details: 'Developed an Autonomous driving car robot and a smart infrastructure for parking. Designed test cases, in-vehicle validation, and integrated V2X communication and custom SSD-Mobilenet.',
+    summary: 'Developed an Autonomous driving car and a smart infrastructure for parking. Designed test cases, in-vehicle validation, and integrated V2X communication and custom SSD-Mobilenet',
+    tech: 'Jetson, LiDAR, V2X, Grid Maps, Sensor fusion, Deep learning, Reinforcement learning, SLAM, ROS2, Trajectory planing, Environment model',
     link: '/projects/adapt',
   },
   {
     title: 'Multi-Sensor Measurement System',
-    summary: 'Developed a sensor fusion system integrating LiDAR and camera for improved perception.',
-    tech: 'Python, Deep Learning, ROS2',
-    details: 'Designed a multi-sensor fusion architecture with LiDAR and camera synchronization. Built preprocessing pipeline for object detection and used DL models for perception enhancement.',
+    summary: 'Designed a multi-sensor fusion architecture with LiDAR and camera synchronization. Built preprocessing pipeline for object detection and used DL models for perception enhancement.',
+    tech: 'Python, LiDAR, Stereo Camera, ROS2, Kalman filter',
     link: '/projects/multisensor',
   },
   {
     title: 'Trajectory Planning',
-    summary: 'Waypoint following and parking maneuvers with sensor-assisted path planning.',
-    tech: 'SUMO, Carla, SLAM, ROS2',
-    details: 'Built waypoint-based trajectory planning integrated with LiDAR and camera sensors. Used Carla + SUMO for simulation and developed SLAM-based updates for dynamic obstacles.',
+    summary: 'Built waypoint-based trajectory planning integrated with LiDAR and camera sensors. Autonomously drive the car to the target point and park with steering maneuvers .',
+    tech: 'A* algorithm, Vehicle dynamics, Carla, SLAM, ROS2',
     link: '/projects/trajectory',
   },
   {
     title: 'Autonomous Emergency Braking',
-    summary: 'Real-time braking system based on LiDAR scans and safety evaluation.',
-    tech: 'Python, Sensor Fusion, Real-Time',
-    details: 'Designed a braking controller using Python and LiDAR-based obstacle detection. Real-time logging and evaluation implemented for validation and test scenarios.',
-    link: '/projects/braking',
+    summary: 'Designed a braking controller using Python and LiDAR-based obstacle detection. Real-time logging and evaluation implemented for validation and test scenarios.',
+    tech: 'Python, Sensor Fusion, Real-Time, Quality-of-service',
+    link: '/projects/aeb',
   },
 ];
 
@@ -67,49 +64,72 @@ export default function Home() {
       <div className="max-w-6xl mx-auto">
         {/* Intro */}
         <section className="mb-16 text-center">
-        <h1 className="text-5xl font-bold text-blue-700 dark:text-blue-400 mb-4">Harshawardhan Patil</h1>
+          <h1 className="text-5xl font-bold text-blue-700 dark:text-blue-400 mb-4">Harshawardhan Patil</h1>
           <h2 className="text-2xl text-gray-600 dark:text-gray-300">Mechanical Engineer | Autonomous Systems engineer</h2>
           <p className="mt-6 mb-20 text-lg text-gray-700 dark:text-gray-300">
             Passionate about engineering innovative mobility solutions and driving the future of autonomous technologies.
           </p>
           
-          
+
+
+
           <img
-          src={finalImage}
-          alt="Harshawardhan Patil"
-          className="mt -10 mb -10 w-full max-w-6xl h-auto mx-auto mb-6 shadow-lg border-4 border-blue-100 dark:border-blue-300 object-cover rounded-xl"
-        />
-        
-   
-          
+            src={finalImage}
+            alt="Harshawardhan Patil"
+            className="mt-10 mb-10 w-full max-w-6xl h-auto mx-auto shadow-lg border-4 border-blue-100 dark:border-blue-300 object-cover rounded-xl"
+          />
         </section>
+
+        <section className="mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            <div className="text-left">
+              <video
+                src={Media1Video}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="mt-10 mb-4 w-full max-w-md h-auto shadow-lg border-4 border-blue-100 dark:border-blue-300 object-cover rounded-xl"
+              />
+              <p className="text-sm text-gray-700 dark:text-gray-300 mt-2">
+                This video demonstrates the real-time navigation and perception capabilities of our autonomous system prototype in a test environment.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-3xl font-semibold text-blue-600 dark:text-blue-300 mb-4">Core Skills</h3>
+              <div className="grid grid-cols-1 gap-6">
+                {['Programming', 'Frameworks', 'Tools', 'Simulation', 'OS'].map((category) => (
+                  <div key={category}>
+                    <h4 className="text-xl font-bold mb-2">{category}</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {skills.filter(s => s.category === category).map(s => (
+                        <span key={s.name} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                          {s.name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* About Me */}
         <section className="mb-16">
           <h3 className="text-3xl font-semibold text-blue-600 dark:text-blue-300 mb-4">About Me</h3>
           <p className="text-gray-700 dark:text-gray-300">
             Hi, I'm Harshawardhan
-
-I'm a mechanical engineer turned autonomous systems enthusiast, building smarter, safer, and more efficient vehicles. Currently working on wiring optimization for zonal E/E architectures at Daimler AG, and diving deep into In-Vehicle communication, SIL and AUTOSAR.
-
-When I'm not coding in Python or tuning deep learning models, you can find me prepping for the Ironman triathlon, trekking mountain trails, or chasing footballs in the German Kreis A-League. I'm a hands-on tinkerer who loves drones, cameras, and anything with an engine — from cars to fighter jets.
-
-Fascinated by the blend of mechanics and intelligence, I aim to engineer systems that move with purpose. Always open to collaborate, learn, and build.
+            <br />
+            I'm a mechanical engineer turned autonomous systems enthusiast, building smarter, safer, and more efficient vehicles. Currently working on wiring optimization for zonal E/E architectures at Daimler AG, and diving deep into In-Vehicle communication, SIL and AUTOSAR.
+            <br />
+            When I'm not coding in Python or tuning deep learning models, you can find me prepping for the Ironman triathlon, trekking mountain trails, or chasing footballs in the German Kreis A-League. I'm a hands-on tinkerer who loves drones, cameras, and anything with an engine — from cars to fighter jets.
+            <br />
+            Fascinated by the blend of mechanics and intelligence, I aim to engineer systems that move with purpose. Always open to collaborate, learn, and build.
           </p>
         </section>
-        <MoreAboutMeButton />
 
-        {/* Skills Grid */}
-        <section className="mb-16">
-          <h3 className="text-3xl font-semibold text-blue-600 dark:text-blue-300 mb-6">Core Skills</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {skills.map((skill, index) => (
-              <div key={index} className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center">
-                <p className="text-sm font-medium text-gray-800 dark:text-gray-100">{skill.name}</p>
-                <p className="text-xs text-blue-500">{skill.category}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <MoreAboutMeButton />
 
         {/* Projects */}
         <section className="mb-16">
@@ -128,6 +148,31 @@ Fascinated by the blend of mechanics and intelligence, I aim to engineer systems
             ))}
           </div>
         </section>
+        
+               <section className="mb-16">
+  <h2 className="text-3xl font-semibold text-blue-700 dark:text-blue-400 mb-6">Certifications & Language Skills</h2>
+  <div className="flex flex-col md:flex-row justify-center items-start gap-10">
+    <div className="flex-1">
+      <h3 className="text-xl font-medium text-gray-700 dark:text-gray-200 mb-4">Certifications</h3>
+      <ul className="list-disc list-inside text-left text-gray-600 dark:text-gray-300">
+        <li>Certified ROS Developer – The Construct</li>
+        <li>Deep Learning Specialization – Coursera</li>
+        <li>Autonomous Driving Engineer Nanodegree – Udacity</li>
+        <li>Advanced C++ Programming – Udemy</li>
+        <li>Introduction to Self-Driving Cars – Coursera</li>
+      </ul>
+    </div>
+    <div className="flex-1">
+      <h3 className="text-xl font-medium text-gray-700 dark:text-gray-200 mb-4">Language Skills</h3>
+      <ul className="list-disc list-inside text-left text-gray-600 dark:text-gray-300">
+        <li>English – Fluent (C2)</li>
+        <li>German – Intermediate (A2–B1)</li>
+        <li>Hindi – Native</li>
+        <li>Marathi – Native</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
         <section className="text-center mt-16">
           <p className="text-gray-500 dark:text-gray-400 text-sm">
