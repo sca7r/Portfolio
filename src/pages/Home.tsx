@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import MoreAboutMeButton from '../components/MoreAboutMeButton';
 import finalImage from '../assets/final.jpg';
 import Media1Video from '../assets/Media1.mp4';
+import SkydiveImage from '../assets/skydive.jpeg';
 
 const projects = [
   {
@@ -33,21 +34,12 @@ const projects = [
 ];
 
 const skills = [
-  { name: 'Python', category: 'Programming' },
-  { name: 'C++', category: 'Programming' },
-  { name: 'ROS2', category: 'Frameworks' },
-  { name: 'PyTorch', category: 'Frameworks' },
-  { name: 'TensorFlow', category: 'Frameworks' },
-  { name: 'scikit-learn', category: 'Frameworks' },
-  { name: 'SUMO', category: 'Simulation' },
-  { name: 'Carla', category: 'Simulation' },
-  { name: 'MATLAB/Simulink', category: 'Simulation' },
-  { name: 'Cognex Vision', category: 'Tools' },
-  { name: 'NVIDIA Jetson', category: 'Tools' },
-  { name: 'Docker', category: 'Tools' },
-  { name: 'Git', category: 'Tools' },
-  { name: 'Linux', category: 'OS' },
-  { name: 'Windows', category: 'OS' },
+  'Python', 'C++', 'ROS2', 'PyTorch', 'TensorFlow', 'Scikit-Learn', 'AUTOSAR',
+  'In-vehicle Networks', 'Embedded Systems', 'SIL', 'ISO26262', 'Deep Learning',
+  'Reinforcement Learning', 'Transfer Learning', 'SUMO', 'Carla', 'MATLAB/Simulink',
+  'Cognex Vision', 'NVIDIA Jetson', 'Path Planning', 'SLAM', 'Trajectory Planning',
+  'Sensor Fusion', 'Kalman Filter', 'GIT', 'Docker', 'Linux', 'Windows',
+  'V-Model', 'Agile (Scrum)'
 ];
 
 export default function Home() {
@@ -69,62 +61,68 @@ export default function Home() {
           <p className="mt-6 mb-20 text-lg text-gray-700 dark:text-gray-300">
             Passionate about engineering innovative mobility solutions and driving the future of autonomous technologies.
           </p>
+         </section>
+          
+          
+          <section className="mb-16">
+          <h3 className="text-3xl font-semibold text-blue-600 dark:text-blue-300 mb-4">About Me</h3>
+          <p className="text-gray-700 dark:text-gray-300">
+            Hi, I'm Harshawardhan<br />
+            I'm a mechanical engineer turned autonomous systems enthusiast, building smarter, safer, and more efficient vehicles. Currently working on wiring optimization for zonal E/E architectures at Daimler AG, and diving deep into In-Vehicle communication, SIL and AUTOSAR.<br />
+            When I'm not coding in Python or tuning deep learning models, you can find me prepping for the Ironman triathlon, trekking mountain trails, or chasing footballs in the German Kreis A-League. I'm a hands-on tinkerer who loves drones, cameras, and anything with an engine — from cars to fighter jets.<br />
+            Fascinated by the blend of mechanics and intelligence, I aim to engineer systems that move with purpose. Always open to collaborate, learn, and build.
+          </p>
+        </section>
+        
 
           <img
             src={finalImage}
             alt="Harshawardhan Patil"
             className="mt-10 mb-10 w-full max-w-6xl h-auto mx-auto shadow-lg border-4 border-blue-100 dark:border-blue-300 object-cover rounded-xl"
           />
-        </section>
+        
 
-        <section className="mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            <div className="text-left">
+<section className="mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Left - Video */}
+            <div className="flex flex-col items-start">
               <video
                 src={Media1Video}
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="mt-10 mb-4 w-full max-w-md h-auto shadow-lg border-4 border-blue-100 dark:border-blue-300 object-cover rounded-xl"
+                className="w-full max-w-md h-auto shadow-lg border-4 border-blue-100 dark:border-blue-300 object-cover rounded-xl"
               />
               <p className="text-sm text-gray-700 dark:text-gray-300 mt-2">
                 This video demonstrates the real-time navigation and perception capabilities of our autonomous system prototype in a test environment.
               </p>
             </div>
-            <div>
-              <h3 className="text-3xl font-semibold text-blue-600 dark:text-blue-300 mb-4">Core Skills</h3>
-              <div className="grid grid-cols-1 gap-6">
-                {['Programming', 'Frameworks', 'Tools', 'Simulation', 'OS'].map((category) => (
-                  <div key={category}>
-                    <h4 className="text-xl font-bold mb-2">{category}</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {skills.filter(s => s.category === category).map(s => (
-                        <span key={s.name} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
-                          {s.name}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+
+            {/* Right - Top: Image, Bottom: Skills */}
+            <div className="flex flex-col gap-6">
+              <img
+                src={SkydiveImage}
+                alt="Skydiving Experience"
+                className="w-full h-auto rounded-xl shadow-lg border-4 border-blue-100 dark:border-blue-300 object-cover"
+              />
+              <h3 className="text-3xl font-semibold text-blue-600 dark:text-blue-300 mb-2">Core Skills</h3>
+              <div className="flex flex-wrap gap-3">
+                {skills.map((skill, i) => (
+                  <span
+                    key={i}
+                    className="px-4 py-2 text-sm font-medium rounded-full bg-gradient-to-r from-blue-200 to-blue-400 dark:from-gray-600 dark:to-gray-700 text-blue-900 dark:text-blue-100 shadow hover:scale-105 transition"
+                  >
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* About Me */}
-        <section className="mb-16">
-          <h3 className="text-3xl font-semibold text-blue-600 dark:text-blue-300 mb-4">About Me</h3>
-          <p className="text-gray-700 dark:text-gray-300">
-            Hi, I'm Harshawardhan
-            <br />
-            I'm a mechanical engineer turned autonomous systems enthusiast, building smarter, safer, and more efficient vehicles. Currently working on wiring optimization for zonal E/E architectures at Daimler AG, and diving deep into In-Vehicle communication, SIL and AUTOSAR.
-            <br />
-            When I'm not coding in Python or tuning deep learning models, you can find me prepping for the Ironman triathlon, trekking mountain trails, or chasing footballs in the German Kreis A-League. I'm a hands-on tinkerer who loves drones, cameras, and anything with an engine — from cars to fighter jets.
-            <br />
-            Fascinated by the blend of mechanics and intelligence, I aim to engineer systems that move with purpose. Always open to collaborate, learn, and build.
-          </p>
-        </section>
+
+        
 
         <MoreAboutMeButton />
 
@@ -145,25 +143,26 @@ export default function Home() {
               </div>
             ))}
           </div>
-          
-                    <section className="mb-16">
+
+          <section className="mb-16">
             <h2 className="text-3xl font-semibold text-blue-700 dark:text-blue-400 mb-6 mt-20">Certifications & Language Skills</h2>
             <div className="flex flex-col md:flex-row justify-center items-start gap-10">
               <div className="flex-1">
                 <h3 className="text-xl font-medium text-gray-700 dark:text-gray-200 mb-4">Certifications</h3>
                 <ul className="list-disc list-inside text-left text-gray-600 dark:text-gray-300">
-                  <li>Certified ROS Developer – The Construct</li>
-                  <li>Deep Learning Specialization – Coursera</li>
-                  <li>Autonomous Driving Engineer Nanodegree – Udacity</li>
-                  <li>Advanced C++ Programming – Udemy</li>
-                  <li>Introduction to Self-Driving Cars – Coursera</li>
+                  <li>Deep Learning with TensorFlow - IBM</li>
+                  <li>Linux Professional Certification - LinkedIn Learning</li>
+                  <li>Basics of PLC - GTTC</li>
+                  <li>Designing in PTC Creo - GTTC</li>
+                  <li>Advanced automobile design - Tata Technologies</li>
+                  <li>Intellectual property rights - NPTEL</li>
                 </ul>
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-medium text-gray-700 dark:text-gray-200 mb-4">Language Skills</h3>
                 <ul className="list-disc list-inside text-left text-gray-600 dark:text-gray-300">
                   <li>English – Fluent (C2)</li>
-                  <li>German – Intermediate (A2–B1)</li>
+                  <li>German – Intermediate (A2 progressing towards B1)</li>
                   <li>Hindi – Native</li>
                   <li>Marathi – Native</li>
                 </ul>
@@ -174,7 +173,8 @@ export default function Home() {
 
         <section className="text-center mt-16">
           <p className="text-gray-500 dark:text-gray-400 text-sm">
-            “Work hard, play harder.” — Life through my lens.
+            “Work hard, play harder!”<br />
+            "Designed with love by Harsh ‪‪❤︎‬"
           </p>
         </section>
       </div>
