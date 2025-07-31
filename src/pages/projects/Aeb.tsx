@@ -41,17 +41,17 @@ export default function Aeb() {
           Key Highlights:
         </h3>
         <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-          <li>Waypoint-based motion planning and parking maneuvers</li>
-          <li>Obstacle detection with LiDAR & Camera fusion</li>
-          <li>Dynamic re-routing based on SLAM updates</li>
-          <li>Simulation environments: Carla & SUMO</li>
+          <li>Lidar based detection for Obstacle</li>
+          <li>Slows the ego vehicle when an object is detected and has chances of collision</li>
+          <li>Emergency break engages as soon as an obstacle is in nearby vicinity of the Ego vehicle</li>
+          
         </ul>
 
         <h3 className="text-xl font-semibold text-blue-500 mt-6 mb-2">Tech Stack:</h3>
         <div className="flex flex-wrap gap-2">
-          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">SUMO</span>
-          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Carla</span>
-          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">SLAM</span>
+          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">NVIDIA jetson</span>
+          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">yd LiDAR</span>
+          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
           <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">ROS2</span>
         </div>
       </div>
