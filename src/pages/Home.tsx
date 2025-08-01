@@ -47,7 +47,7 @@ export default function Home() {
 
   return (
     <motion.div
-      className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 py-12 px-6"
+      className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-purple-900 dark:to-purple-400 py-12 px-6"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
@@ -56,18 +56,18 @@ export default function Home() {
       <div className="max-w-6xl mx-auto">
         {/* Intro */}
         <section className="mb-16 text-center">
-          <h1 className="text-5xl font-bold text-blue-700 dark:text-blue-400 mb-4">Harshawardhan Patil</h1>
-          <h2 className="text-2xl text-gray-600 dark:text-gray-300">Mechanical Engineer | Autonomous Systems engineer</h2>
-          <p className="mt-6 mb-20 text-lg text-gray-700 dark:text-gray-300">
-            Passionate about engineering innovative mobility solutions and driving the future of autonomous technologies.
+          <h1 className="text-5xl font-arial bold text-black-700 dark:text-black-400 mb-4">Harshawardhan Patil</h1>
+          <h2 className="text-2xl font-arial text-gray-600 dark:text-gray-300">Automotive and Machine learning enthusiast </h2>
+          <p className="mt-6 mb-20 font-arial text-lg text-gray-700 dark:text-gray-300">
+            Passionate about engineering innovative solutions.
           </p>
          </section>
           
           
-          <section className="mb-16">
-          <h3 className="text-3xl font-semibold text-blue-600 dark:text-blue-300 mb-4">About Me</h3>
-          <p className="text-gray-700 dark:text-gray-300">
-            Hi, I'm Harshawardhan<br />
+          <section className="mb-12">
+          <h3 className="text-3xl font-arial text-black-600 dark:text-black-400 mb-4">About Me</h3>
+          <p className="font-arial text-gray-700 dark:text-gray-300"><br />
+            Hi, I'm Harshawardhan but you can call me Harsh!! 😉<br /><br />
             I'm a mechanical engineer turned autonomous systems enthusiast, building smarter, safer, and more efficient vehicles. Currently working on wiring optimization for zonal E/E architectures at Daimler AG, and diving deep into In-Vehicle communication, SIL and AUTOSAR.<br />
             When I'm not coding in Python or tuning deep learning models, you can find me prepping for the Ironman triathlon, trekking mountain trails, or chasing footballs in the German Kreis A-League. I'm a hands-on tinkerer who loves drones, cameras, and anything with an engine — from cars to fighter jets.<br />
             Fascinated by the blend of mechanics and intelligence, I aim to engineer systems that move with purpose. Always open to collaborate, learn, and build.
@@ -78,7 +78,7 @@ export default function Home() {
           <img
             src={finalImage}
             alt="Harshawardhan Patil"
-            className="mt-10 mb-10 w-full max-w-6xl h-auto mx-auto shadow-lg border-4 border-blue-100 dark:border-blue-300 object-cover rounded-xl"
+            className="mt-10 mb-10 w-full max-w-6xl h-auto mx-auto shadow-lg border-4 border-blue-100 dark:border-pink-300 object-cover rounded-xl"
           />
         
 
@@ -92,7 +92,7 @@ export default function Home() {
                 muted
                 loop
                 playsInline
-                className="w-full max-w-md h-auto shadow-lg border-4 border-blue-100 dark:border-blue-300 object-cover rounded-xl"
+                className="w-full max-w-md h-auto shadow-lg border-4 border-blue-100 dark:border-pink-300 object-cover rounded-xl"
               />
               <p className="text-sm text-gray-700 dark:text-gray-300 mt-2">
                 This video demonstrates the real-time navigation and perception capabilities of our autonomous system prototype in a test environment.
@@ -104,14 +104,14 @@ export default function Home() {
               <img
                 src={SkydiveImage}
                 alt="Skydiving Experience"
-                className="w-full h-auto rounded-xl shadow-lg border-4 border-blue-100 dark:border-blue-300 object-cover"
+                className="w-full h-auto rounded-xl shadow-lg border-4 border-blue-100 dark:border-pink-300 object-cover"
               />
-              <h3 className="text-3xl font-semibold text-blue-600 dark:text-blue-300 mb-2">Core Skills</h3>
+              <h3 className="text-3xl font-arial text-black-600 dark:text-black-400 mb-2">Core Skills</h3>
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, i) => (
                   <span
                     key={i}
-                    className="px-4 py-2 text-sm font-medium rounded-full bg-gradient-to-r from-blue-200 to-blue-400 dark:from-gray-600 dark:to-gray-700 text-blue-900 dark:text-blue-100 shadow hover:scale-105 transition"
+                    className="px-4 py-2 text-sm font-arial rounded-full bg-gradient-to-r from-blue-200 to-blue-400 dark:from-gray-600 dark:to-gray-700 text-blue-900 dark:text-blue-100 shadow hover:scale-105 transition"
                   >
                     {skill}
                   </span>
@@ -128,7 +128,7 @@ export default function Home() {
 
         {/* Projects */}
         <section className="mb-16">
-          <h3 className="text-3xl font-semibold text-blue-600 dark:text-blue-300 mb-6 mt-20">Projects</h3>
+          <h3 className="text-3xl font-arial text-black-600 dark:text-black-300 mb-6 mt-20">Projects</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <div
@@ -136,7 +136,7 @@ export default function Home() {
                 className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md cursor-pointer hover:scale-[1.02] transition-transform border border-blue-200 dark:border-blue-700 hover:bg-blue-50 dark:hover:bg-blue-900"
                 onClick={() => navigate(project.link)}
               >
-                <h4 className="text-xl font-bold mb-1 text-blue-700 dark:text-blue-300 underline">{project.title}</h4>
+                <h4 className="text-xl font-arial mb-1 text-blue-700 dark:text-blue-300 underline">{project.title}</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">{project.summary}</p>
                 <p className="text-sm text-blue-500 mb-2 italic">{project.tech}</p>
                 <p className="text-sm text-blue-600 dark:text-blue-300 mt-2">Click to explore more →</p>
@@ -145,10 +145,10 @@ export default function Home() {
           </div>
 
           <section className="mb-16">
-            <h2 className="text-3xl font-semibold text-blue-700 dark:text-blue-400 mb-6 mt-20">Certifications & Language Skills</h2>
+            <h2 className="text-3xl font-arial text-black-700 dark:text-black-400 mb-6 mt-20">Certifications & Language Skills</h2>
             <div className="flex flex-col md:flex-row justify-center items-start gap-10">
               <div className="flex-1">
-                <h3 className="text-xl font-medium text-gray-700 dark:text-gray-200 mb-4">Certifications</h3>
+                <h3 className="text-xl font-arial text-gray-700 dark:text-gray-200 mb-4">Certifications</h3>
                 <ul className="list-disc list-inside text-left text-gray-600 dark:text-gray-300">
                   <li>Deep Learning with TensorFlow - IBM</li>
                   <li>Linux Professional Certification - LinkedIn Learning</li>
@@ -159,7 +159,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-medium text-gray-700 dark:text-gray-200 mb-4">Language Skills</h3>
+                <h3 className="text-xl font-arial text-gray-700 dark:text-gray-200 mb-4">Language Skills</h3>
                 <ul className="list-disc list-inside text-left text-gray-600 dark:text-gray-300">
                   <li>English – Fluent (C2)</li>
                   <li>German – Intermediate (A2 progressing towards B1)</li>
@@ -172,9 +172,9 @@ export default function Home() {
         </section>
 
         <section className="text-center mt-16">
-          <p className="text-gray-500 dark:text-gray-400 text-sm">
+          <p className=" mb-1 text-black-900 dark:text-red-900 text-sm">
             “Work hard, play harder!”<br />
-            "Designed with love by Harsh ‪‪❤︎‬"
+           Designed with love by Harsh ‪‪❤︎‬
           </p>
         </section>
       </div>

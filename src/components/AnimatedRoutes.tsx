@@ -19,6 +19,7 @@ export default function AnimatedRoutes() {
       <Route path="/projects/trajectory" element={<Trajectory />} />
       <Route path="/projects/aeb" element={<Aeb />} />
       <Route path="/contact" element={<Contact />} />
+     
     </Routes>
   );
 }

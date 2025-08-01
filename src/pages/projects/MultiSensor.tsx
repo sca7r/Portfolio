@@ -5,19 +5,19 @@ import { Link } from 'react-router-dom';
 export default function MultiSensor() {
   return (
     <motion.div
-      className="min-h-screen bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 py-12 px-6"
+      className="min-h-screen bg-gradient-to-b from-gray-100 to-white dark:from-purple-900 dark:to-purple-400 py-12 px-6"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -40 }}
       transition={{ duration: 0.4 }}
     > 
       <div className="max-w-5xl mx-auto">
-          <Link to="/" className="text-blue-500 underline mb-6 inline-block">
+          <Link to="/" className="text-black-500 underline mb-6 inline-block">
             ← Back to Home
           </Link>
         </div>
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-blue-700 dark:text-blue-300 mb-6">
+        <h1 className="text-4xl font-arial text-black-700 dark:text-black-300 mb-6">
           Multi-Sensor Measurement System
         </h1>
 
@@ -26,8 +26,8 @@ export default function MultiSensor() {
         </p>
 
         <div className="mb-6">
-          <h2 className="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">
-            Highlights:
+          <h2 className="text-2xl font-arial text-black-600 dark:text-black-400 mb-2">
+            Key Highlights:
           </h2>
           <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300">
             <li>Designed a sensor fusion architecture for object-level synchronization</li>
@@ -38,7 +38,7 @@ export default function MultiSensor() {
         </div>
 
         <div className="mb-6">
-          <h2 className="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">
+          <h2 className="text-2xl font-arial text-black-600 dark:text-black-400 mb-2">
             Tech Stack:
           </h2>
           <div className="flex flex-wrap gap-4">
@@ -58,8 +58,9 @@ export default function MultiSensor() {
           <img src="/images/sensor_fusion_2.jpg" alt="Object Detection Output" className="rounded-lg shadow-md" />
         </div>
 
-        
+          <div className="font-arial text-sm text-black-500 dark:text-black-400">Created by Harshawardhan Patil</div>
       </div>
+     
     </motion.div>
   );
 }

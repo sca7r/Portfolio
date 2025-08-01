@@ -5,18 +5,18 @@ import { Link } from 'react-router-dom';
 export default function Trajectory() {
   return (
     <motion.div
-      className="min-h-screen bg-gradient-to-b from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 p-8"
+      className="min-h-screen bg-gradient-to-b from-white to-blue-50 dark:from-purple-900 dark:to-purple-400 p-8"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-5xl mx-auto">
-        <Link to="/" className="text-blue-500 underline mb-6 inline-block">
+        <Link to="/" className="text-black-500 underline mb-6 inline-block">
           ← Back to Home
         </Link>
 
-        <h1 className="text-4xl font-bold text-blue-700 dark:text-blue-300 mb-4">
+        <h1 className="text-4xl font-arial text-black-700 dark:text-black-300 mb-4">
           Trajectory Planning
         </h1>
 
@@ -24,20 +24,9 @@ export default function Trajectory() {
           Designed and implemented a waypoint-following algorithm for autonomous parking maneuvers. The system supports dynamic obstacle updates and real-time planning. Integrated LiDAR and camera data enabled enhanced safety and perception. Carla and SUMO simulators were used for testing in realistic urban scenarios.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-6 my-8">
-          <img
-            src="/trajectory-sim.png"
-            alt="Trajectory Simulation"
-            className="rounded-lg shadow-md"
-          />
-          <img
-            src="/trajectory-visual.png"
-            alt="Trajectory Visualization"
-            className="rounded-lg shadow-md"
-          />
-        </div>
 
-        <h3 className="text-2xl font-semibold text-blue-600 dark:text-blue-300 mt-8 mb-4">
+
+        <h3 className="text-2xl font-arial text-black-600 dark:text-black-300 mt-8 mb-4">
           Key Highlights:
         </h3>
         <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
@@ -47,13 +36,28 @@ export default function Trajectory() {
           <li>Simulation environments: Carla & SUMO</li>
         </ul>
 
-        <h3 className="text-xl font-semibold text-blue-500 mt-6 mb-2">Tech Stack:</h3>
-        <div className="flex flex-wrap gap-2">
-          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">SUMO</span>
-          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Carla</span>
-          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">SLAM</span>
-          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">ROS2</span>
+         <div className="mb-6">
+          <h2 className="text-2xl font-arial text-black-600 dark:text-black-400 mb-2">
+            Tech Stack:
+          </h2>
+          <div className="flex flex-wrap gap-4">
+            {['SUMO', 'Carla', 'SLAM', 'ROS2', 'Python'].map((tech, idx) => (
+              <span
+                key={idx}
+                className="bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-200 px-3 py-1 rounded-full text-sm"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+          <img src="/images/sensor_fusion_1.jpg" alt="Sensor Fusion Setup" className="rounded-lg shadow-md" />
+          <img src="/images/sensor_fusion_2.jpg" alt="Object Detection Output" className="rounded-lg shadow-md" />
+        </div>
+
+          <div className="font-arial text-sm text-black-500 dark:text-black-400">Created by Harshawardhan Patil</div>
       </div>
     </motion.div>
   );
