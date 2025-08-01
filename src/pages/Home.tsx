@@ -59,7 +59,7 @@ export default function Home() {
           <h1 className="text-5xl font-arial bold text-black-700 dark:text-black-400 mb-4">Harshawardhan Patil</h1>
           <h2 className="text-2xl font-arial text-gray-600 dark:text-gray-300">Automotive and Machine learning enthusiast </h2>
           <p className="mt-6 mb-20 font-arial text-lg text-gray-700 dark:text-gray-300">
-            Passionate about engineering innovative solutions.
+            Passionate about engineering and sports.
           </p>
          </section>
           
