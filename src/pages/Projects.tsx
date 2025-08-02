@@ -20,11 +20,41 @@ const projects = [
       'Implemented waypoint-based trajectory planner with obstacle avoidance using simulated and real sensor data.',
     technologies: 'ROS2, Carla, SUMO, LiDAR, Python, Pathfinding, SLAM',
   },
+    {
+    title: 'Object detection with a SSD Mobilnet using transfer learning',
+    description:
+      'A transfer learning based SSD Mobilnet model capable of recognizing several classes of objects which are integral to the autonomous driving context ',
+    technologies: 'Python, Intel RealSense, SSD Mobilnet, Transfer Learning, NVIDIA Jetson',
+  },
   {
     title: 'Autonomous Emergency Braking (AEB)',
     description:
       'Real-time emergency braking using LiDAR-based object detection with data logging and evaluation.',
     technologies: 'Python, Sensor Fusion, LiDAR, Real-time Systems',
+  },
+  {
+    title: 'CPM Integration in V2X communication',
+    description:
+      'Real-time communication of CPM for V2X communication according to ETSI standards.',
+    technologies: 'ETSI standards, LiDAR, Real-Time, V2X, SSD-Mobilnet, wireless communication',
+  },
+  {
+    title: 'Universal electric vehicle conversion solution for accelerating the EV adoption',
+    description:
+      'A concept with a 3D model for Universal electric vehicle conversion increasing sustainability and reducing scrap waste.',
+    technologies: 'Solidworks,CAD modelling, Systematic research, Wireless charging',
+  },
+  {
+    title: 'Design of Electric utility vehicle (EUV)',
+    description:
+      'A design model of a Electric utility vehicle (EUV) with microcontroller acting as a master-slave combo for control, Solar charging capabilities with smart battery management system.',
+    technologies: 'Solidworks, CAD modeling, Solar charging, Vehicle dynamics, HMI, Simulation, Microcontroller'
+  },
+  {
+    title: 'Wireless sensor integrated device for concrete curing process',
+    description:
+      'A device used to monitor the curing process of concrete in concrete structure with alert system for detection of cracks internally to avoid collapsing of the structure ',
+    technologies: 'Embedded C, Arduino Nano, Wire less charging, sensors, Durability analysis via FEM, WIFI, API server'
   },
 ];
 

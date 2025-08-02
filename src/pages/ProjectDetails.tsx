@@ -31,6 +31,13 @@ const projectData: { [key: string]: { title: string; details: string; tech: stri
     tech: 'Python, LiDAR, Real-time Systems',
     image: '/images/braking.jpg',
   },
+ cpm: {
+    title: 'CPM Integration',
+    details:
+      'Real-time communication of CPM for V2X communication according to ETSI standards.',
+    tech: 'Python, LiDAR, Real-time Systems',
+    image: '/images/braking.jpg',
+  },
 };
 
 export default function ProjectDetails() {

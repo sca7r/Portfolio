@@ -26,11 +26,41 @@ const projects = [
     link: '/projects/trajectory',
   },
   {
+  title: 'Object detection with a SSD Mobilnet using transfer learning',
+    summary: 'AA transfer learning based SSD Mobilnet model capable of recognizing several classes of objects which are integral to the autonomous driving context. ',
+    tech: 'Python, Intel RealSense, SSD Mobilnet, Transfer Learning, NVIDIA Jetson',
+    link: '/projects/od',
+},
+  {
     title: 'Autonomous Emergency Braking',
     summary: 'Designed a braking controller using Python and LiDAR-based obstacle detection. Real-time logging and evaluation implemented for validation and test scenarios.',
     tech: 'Python, Sensor Fusion, Real-Time, Quality-of-service',
     link: '/projects/aeb',
   },
+  {
+    title: 'CPM Integration',
+    summary: 'Integrated a functional CPM message in V2X protocol which communicates with other traffic participants in realtime with the use of Cohda On board unit wirelessly notifying other traffic participants about the objects they cant percieve directly. Real-time logging and evaluation implemented for validation and test scenarios.',
+    tech: 'ETSI standards, LiDAR, Real-Time, V2X, SSD-Mobilnet, wireless communication',
+    link: '/projects/cpm',
+  },
+  {
+    title: 'Universal electric vehicle conversion solution for accelerating the EV adoption',
+    summary: 'A concept with a 3D model for Universal electric vehicle conversion increasing sustainability and reducing scrap waste.',
+    tech: 'Solidworks,CAD modelling, Systematic research, Wireless charging',
+    link: '/projects/ev',
+  },
+{
+    title: 'Design of Electric utility vehicle (EUV)',
+    summary: 'A design model of a Electric utility vehicle (EUV) with microcontroller acting as a master-slave combo for control, Solar charging capabilities with smart battery management system.',
+    tech: 'Solidworks, CAD modeling, Solar charging, Vehicle dynamics, HMI, Simulation, Microcontroller',
+    link: '/projects/ev2',
+  },
+  {
+  title: 'Wireless sensor integrated device for concrete curing process',
+    summary: 'A device used to monitor the curing process of concrete in concrete structure with alert system for detection of cracks internally to avoid collapsing of the structure.',
+    tech: 'Embedded C, Arduino Nano, Wire less charging, sensors, Durability analysis via FEM, WIFI, API server',
+    link: '/projects/iot',
+},
 ];
 
 const skills = [
@@ -38,8 +68,8 @@ const skills = [
   'In-vehicle Networks', 'Embedded Systems', 'SIL', 'ISO26262', 'Deep Learning',
   'Reinforcement Learning', 'Transfer Learning', 'SUMO', 'Carla', 'MATLAB/Simulink',
   'Cognex Vision', 'NVIDIA Jetson', 'Path Planning', 'SLAM', 'Trajectory Planning',
-  'Sensor Fusion', 'Kalman Filter', 'GIT', 'Docker', 'Linux', 'Windows',
-  'V-Model', 'Agile (Scrum)'
+  'Sensor Fusion', 'Kalman Filter', 'GIT', 'Docker', 'Linux', 'Windows','Solidworks',
+  'V-Model', 'Agile (Scrum)','MasterCam','Ansys'
 ];
 
 export default function Home() {

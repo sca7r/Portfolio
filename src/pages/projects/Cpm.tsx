@@ -1,8 +1,8 @@
-// src/pages/projects/Adapt.tsx
+// src/pages/projects/cpm.tsx
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-export default function Adapt() {
+export default function Cpm() {
   return (
     <motion.div
       className="min-h-screen bg-gradient-to-b from-white to-blue-50 dark:from-purple-900 dark:to-purple-400 py-12 px-6"
@@ -15,28 +15,28 @@ export default function Adapt() {
         <Link to="/" className="text-black-500 underline mb-6 inline-block">← Back to Home</Link>
 
         <h1 className="text-4xl font-arial  text-black-700 dark:text-black-300 mt-6 mb-4">
-          ADAPT – Autonomous Driving and Parking Technology
+          CPM Integration
         </h1>
 
         <p className="text-gray-700 dark:text-gray-300 mb-6">
-          ADAPT is a smart mobility solution combining autonomous robotic vehicles with intelligent parking infrastructure. It enables seamless parking with minimal human intervention.
+          The Project was about detecting the objects in vicinity of the ego vehicle and covert it into cooperative perception message forming a structure according to ETSI standards defined for CPM. Then CPM is converted into UDPRAW xml file and transmitted via a V2X device and received by a reciever and coverted into ROS CPM format and visualised in GUI
         </p>
 
-        
+     
 
         <h2 className="text-2xl font-arial text-black-600 dark:text-black-300 mb-2">Key Highlights</h2>
         <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mb-6">
           <li>V2X Communication for smart infrastructure interaction</li>
-          <li>Real-time trajectory planning with obstacle avoidance</li>
-          <li>SSD-Mobilenet based object detection (88% mAP)</li>
-          <li>Jetson-based edge inference and control</li>
+          <li>Real-time communication with other traffic participants</li>
+          <li>detection of objects that are not visible directly</li>
+          <li>V2X Cohda OBU -based signal transmission </li>
         </ul>
 <div className="mb-6">
           <h2 className="text-2xl font-arial text-black-600 dark:text-black-400 mb-2">
              Tech Stack:
           </h2>
           <div className="flex flex-wrap gap-4">
-            {['Nvidia', 'Jetson', 'Python', 'ROS2', 'Intel RealSense', 'Y-LiDAR', 'SSD-Mobilenet', 'V2X Communication', 'Grid Mapping'].map((tech, idx) => (
+            {['Nvidia', 'Jetson', 'Python', 'ROS2', 'Intel RealSense', 'Y-LiDAR', 'Cohda OBU', 'V2X Communication', 'SSD monilnet','CPM'].map((tech, idx) => (
               <span
                 key={idx}
                 className="bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-200 px-3 py-1 rounded-full text-sm"
