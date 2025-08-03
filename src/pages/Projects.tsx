@@ -11,7 +11,7 @@ const projects = [
     technologies: 'Jetson, Arduino, RealSense, LiDAR, Deep Learning, V2X, Grid Maps',
   },
   {
-    title: 'Multi-Sensor Measurement System for Perception',
+    title: 'Multi-Sensor Fusion System for Perception',
     description:
       'Designed a fusion system combining LiDAR and camera data for improved object-level scene understanding.',
     technologies: 'ROS2, Python, LiDAR, Camera, Deep Learning, Data Sync',

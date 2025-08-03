@@ -62,10 +62,12 @@ export default function Trajectory() {
       alt="Experience 4"
       className="w-full h-90 object-cover rounded-xl shadow-lg border-4 border-blue-100 dark:border-pink-300"
     />
-    <p className=" px-8 text-center text-black-700 dark:text-gray-900 mt-10">
-                Steering maneuvers calculations for trajectory .
-              </p>
+
+  
   </div>
+     <ul className="list-disc list-inside text-gray-700 dark:text-gray-900 space-y-2">
+          <li>Steering maneuvers calculations for trajectory .</li>
+           </ul>
 </div>
    
 

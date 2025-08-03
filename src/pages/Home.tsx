@@ -14,7 +14,7 @@ const projects = [
     link: '/projects/adapt',
   },
   {
-    title: 'Multi-Sensor Measurement System',
+    title: 'Multi-Sensor Fusion System',
     summary: 'Designed a multi-sensor fusion architecture with LiDAR and camera synchronization. Built preprocessing pipeline for object detection and used DL models for perception enhancement.',
     tech: 'Python, LiDAR, Stereo Camera, ROS2, Kalman filter',
     link: '/projects/multisensor',

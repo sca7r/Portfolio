@@ -20,7 +20,7 @@ export default function MultiSensor() {
         </div>
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-arial text-black-700 dark:text-black-300 mb-6">
-          Multi-Sensor Measurement System
+          Multi-Sensor Fusion System
         </h1>
 
         <p className="text-gray-800 dark:text-gray-200 text-lg mb-4">

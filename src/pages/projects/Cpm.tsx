@@ -60,12 +60,12 @@ export default function Cpm() {
       src={TestImage}
       alt="Training"
       className="w-full h-90 object-cover rounded-xl shadow-lg border-4 border-blue-100 dark:border-pink-300"
-    />
-   <p className="px-8 text-center text-black-700 dark:text-gray-900 mt-10">
-                Live testing at Kronach, Germany.
-              </p>
+    /><br /> 
+   
   </div>
-  
+  <p className=" text-center text-black-700 dark:text-gray-900 ">
+                Live testing at Kronach, Germany.
+              </p><br /> 
 <br /> 
   {/* Image 2 */}
   <div className="flex justify-center">
@@ -74,10 +74,11 @@ export default function Cpm() {
       alt="Experience 2"
       className="w-full h-90 object-cover rounded-xl shadow-lg border-4 border-blue-100 dark:border-pink-300"
     />
-    <p className=" text-center text-black-700 dark:text-gray-900 mt-10">
-                Flow chart for CPM integration.
-              </p>
+    
   </div>
+  <p className=" text-center text-black-700 dark:text-gray-900 ">
+                Flow chart for CPM integration.
+              </p><br /> 
 </div>
   <br /> 
     {/* Image 3 */}
@@ -87,11 +88,11 @@ export default function Cpm() {
       alt="Experience 3"
       className="w-full h-70 object-cover rounded-xl shadow-lg border-4 border-blue-100 dark:border-pink-300"
     />
-       <p className="px-8 text-center text-black-700 dark:text-gray-900 mt-10">
+       
+  </div>
+<p className="px-8 text-center text-black-700 dark:text-gray-900 ">
                 CPM output.
               </p>
-  </div>
-
 
    
 
