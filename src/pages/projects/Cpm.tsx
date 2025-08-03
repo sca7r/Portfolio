@@ -1,6 +1,10 @@
 // src/pages/projects/cpm.tsx
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import TestImage from '../../assets/test.jpeg';
+import VImage from '../../assets/v.png';
+import BlkImage from '../../assets/blk.jpeg';
+
 
 export default function Cpm() {
   return (
@@ -47,10 +51,52 @@ export default function Cpm() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-          <img src="/images/sensor_fusion_1.jpg" alt="Sensor Fusion Setup" className="rounded-lg shadow-md" />
-          <img src="/images/sensor_fusion_2.jpg" alt="Object Detection Output" className="rounded-lg shadow-md" />
-        </div>
+<div className="grid grid-cols-1  gap-6">
+  
+
+  {/* Image 1 */}
+  <div className="flex justify-center">
+    <img
+      src={TestImage}
+      alt="Training"
+      className="w-full h-90 object-cover rounded-xl shadow-lg border-4 border-blue-100 dark:border-pink-300"
+    />
+   <p className="px-8 text-center text-black-700 dark:text-gray-900 mt-10">
+                Live testing at Kronach, Germany.
+              </p>
+  </div>
+  
+<br /> 
+  {/* Image 2 */}
+  <div className="flex justify-center">
+    <img
+      src={BlkImage}
+      alt="Experience 2"
+      className="w-full h-90 object-cover rounded-xl shadow-lg border-4 border-blue-100 dark:border-pink-300"
+    />
+    <p className=" text-center text-black-700 dark:text-gray-900 mt-10">
+                Flow chart for CPM integration.
+              </p>
+  </div>
+</div>
+  <br /> 
+    {/* Image 3 */}
+  <div className="flex justify-center">
+    <img
+      src={VImage}
+      alt="Experience 3"
+      className="w-full h-70 object-cover rounded-xl shadow-lg border-4 border-blue-100 dark:border-pink-300"
+    />
+       <p className="px-8 text-center text-black-700 dark:text-gray-900 mt-10">
+                CPM output.
+              </p>
+  </div>
+
+
+   
+
+
+    <br />  
 
         <div className="font-arial text-sm text-black-500 dark:text-black-400">Created by Harshawardhan Patil</div>
       </div>

@@ -1,6 +1,7 @@
 // src/pages/ProjectDetails.tsx
 import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import AiVideo from '../assets/Ai.mp4';
 
 const projectData: { [key: string]: { title: string; details: string; tech: string; image?: string } } = {
   adapt: {

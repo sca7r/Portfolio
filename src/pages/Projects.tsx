@@ -1,5 +1,7 @@
 // src/pages/Projects.tsx
 import ProjectCard from '../components/ProjectCard';
+import AiVideo from '../assets/Ai.mp4';
+import SkydiveImg from '../assets/skydive.jpeg';
 
 const projects = [
   {
@@ -20,7 +22,7 @@ const projects = [
       'Implemented waypoint-based trajectory planner with obstacle avoidance using simulated and real sensor data.',
     technologies: 'ROS2, Carla, SUMO, LiDAR, Python, Pathfinding, SLAM',
   },
-    {
+  {
     title: 'Object detection with a SSD Mobilnet using transfer learning',
     description:
       'A transfer learning based SSD Mobilnet model capable of recognizing several classes of objects which are integral to the autonomous driving context ',
@@ -63,6 +65,21 @@ export default function Projects() {
     <div className="min-h-screen bg-gradient-to-b from-white to-blue-100 dark:from-gray-900 dark:to-gray-800 p-10">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-blue-700 dark:text-blue-400 mb-10">Projects</h2>
+
+        <div className="flex flex-col md:flex-row items-center justify-between mb-10">
+          <video
+            src={AiVideo}
+            autoPlay
+            muted
+            loop
+            className="w-full md:w-1/2 rounded-lg shadow-lg"
+          />
+          <img
+            src={SkydiveImg}
+            alt="Skydive"
+            className="w-full md:w-1/3 mt-6 md:mt-0 md:ml-6 rounded-lg shadow-lg object-cover"
+          />
+        </div>
 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (

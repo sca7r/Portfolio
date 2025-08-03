@@ -1,6 +1,9 @@
 // src/pages/Ev.tsx
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import UniImage from '../../assets/uni.jpeg';
+import PitchVideo from '../../assets/pitch.mp4';
+
 
 export default function Ev() {
   return (
@@ -52,11 +55,30 @@ export default function Ev() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-          <img src="/images/sensor_fusion_1.jpg" alt="Sensor Fusion Setup" className="rounded-lg shadow-md" />
-          <img src="/images/sensor_fusion_2.jpg" alt="Object Detection Output" className="rounded-lg shadow-md" />
-        </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+  {/* Video Item */}
+  <div className="flex justify-center">
+    <video
+      src={PitchVideo}
+      autoPlay
+      muted
+      loop
+      playsInline
+      className="transform rotate-0 w-full h-80 object-cover rounded-xl shadow-lg border-4 border-blue-100 dark:border-pink-300"
+    />
+  </div>
 
+  {/* Image 1 */}
+  <div className="flex justify-center">
+    <img
+      src={UniImage}
+      alt="Training"
+      className="w-full h-80 object-cover rounded-xl shadow-lg border-4 border-blue-100 dark:border-pink-300"
+    />
+  </div>
+  </div>
+ 
+<br />
           <div className="font-arial text-sm text-black-500 dark:text-black-400">Created by Harshawardhan Patil</div>
       </div>
      

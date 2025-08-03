@@ -1,7 +1,11 @@
 // src/pages/Ev2.tsx
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import BlockImage from '../../assets/block.jpeg';
+import BrakeImage from '../../assets/brake.jpeg';
+import ChasisImage from '../../assets/chasis.jpeg';
+import SteeringImage from '../../assets/steering.jpeg';
+import WheelImage from '../../assets/wheel.jpeg';
 export default function Ev2() {
   return (
     <motion.div
@@ -53,10 +57,22 @@ export default function Ev2() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-          <img src="/images/sensor_fusion_1.jpg" alt="Sensor Fusion Setup" className="rounded-lg shadow-md" />
-          <img src="/images/sensor_fusion_2.jpg" alt="Object Detection Output" className="rounded-lg shadow-md" />
-        </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+  {[BlockImage, BrakeImage, ChasisImage, WheelImage, SteeringImage].map((img, idx) => (
+    <div key={idx} className="flex justify-center items-center">
+      <img
+        src={img}
+        alt={`Experience ${idx + 1}`}
+        className="h-auto w-full max-w-xs object-contain rounded-xl shadow-lg border-4 border-blue-100 dark:border-pink-300"
+      />
+    </div>
+  ))}
+</div>
+
+   
+
+
+    <br />   
 
           <div className="font-arial text-sm text-black-500 dark:text-black-400">Created by Harshawardhan Patil</div>
       </div>
