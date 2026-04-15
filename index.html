@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const initialTheme = savedTheme ? savedTheme : (systemDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', initialTheme);
+    </script>
+
     <style>
+
         :root[data-theme="dark"] {
             --bg: #050510;
             --bg2: #0b0b1f;
@@ -1955,13 +1963,37 @@
         type();
 
         // --- Theme Toggle ---
+        // --- Theme Toggle & System Preference ---
+        const h = document.documentElement;
+        const tIcon = document.getElementById("tIcon");
+        const tLabel = document.getElementById("tLabel");
+
+
+        const currentTheme = h.getAttribute("data-theme");
+        tIcon.textContent = currentTheme === "dark" ? "☀" : "🌙";
+        tLabel.textContent = currentTheme === "dark" ? "Light" : "Dark";
+
         function toggleTheme() {
-            const h = document.documentElement;
-            const d = h.getAttribute("data-theme") === "dark";
-            h.setAttribute("data-theme", d ? "light" : "dark");
-            document.getElementById("tIcon").textContent = d ? "🌙" : "☀";
-            document.getElementById("tLabel").textContent = d ? "Dark" : "Light";
+            const isDark = h.getAttribute("data-theme") === "dark";
+            const newTheme = isDark ? "light" : "dark";
+    
+            h.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+    
+            tIcon.textContent = newTheme === "dark" ? "☀" : "🌙";
+            tLabel.textContent = newTheme === "dark" ? "Light" : "Dark";
         }
+
+// Listen for OS theme changes in real-time
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    // Only auto-switch if the user hasn't manually clicked the toggle
+    if (!localStorage.getItem('theme')) {
+        const newTheme = e.matches ? 'dark' : 'light';
+        h.setAttribute('data-theme', newTheme);
+        tIcon.textContent = newTheme === "dark" ? "☀" : "🌙";
+        tLabel.textContent = newTheme === "dark" ? "Light" : "Dark";
+    }
+});
 
         // --- Mobile Menu Toggle ---
         function toggleMenu() {
