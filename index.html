@@ -872,7 +872,7 @@
         }
 
         .solar-svg-wrap {
-            min-width: 700px;
+            min-width: 1000px;
             width: 100%;
             position: relative;
             padding-bottom: 20px;
@@ -1536,131 +1536,100 @@
 
     <div class="section-divider"></div>
 
-    <section id="experience">
-        <p class="section-label">03 — Experience</p>
-        <h2 class="section-title">Mission log</h2>
-        <div class="solar-wrap">
-            <div class="solar-svg-wrap">
-                <svg id="solarsys" viewBox="0 0 900 278" width="100%" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;display:block">
-                    <defs>
-                        <filter id="go" x="-50%" y="-50%" width="200%" height="200%">
-                            <feGaussianBlur stdDeviation="3" result="b"/>
-                            <feMerge>
-                                <feMergeNode in="b"/>
-                                <feMergeNode in="SourceGraphic"/>
-                            </feMerge>
-                        </filter>
-                        <filter id="gb" x="-50%" y="-50%" width="200%" height="200%">
-                            <feGaussianBlur stdDeviation="4" result="b"/>
-                            <feMerge>
-                                <feMergeNode in="b"/>
-                                <feMergeNode in="SourceGraphic"/>
-                            </feMerge>
-                        </filter>
-                        <filter id="gs" x="-60%" y="-60%" width="220%" height="220%">
-                            <feGaussianBlur stdDeviation="5" result="b"/>
-                            <feMerge>
-                                <feMergeNode in="b"/>
-                                <feMergeNode in="SourceGraphic"/>
-                            </feMerge>
-                        </filter>
-                        <clipPath id="c1"><circle r="20"/></clipPath>
-                        <clipPath id="c2"><circle r="28"/></clipPath>
-                        <clipPath id="c3"><circle r="38"/></clipPath>
-                        <clipPath id="c4"><circle r="46"/></clipPath>
-                    </defs>
-                    <line x1="155" y1="180" x2="880" y2="180" stroke="var(--accent)" stroke-width="1.2" stroke-dasharray="6 5" opacity=".5"/>
-                    <g filter="url(#gs)">
-                        <circle cx="90" cy="180" r="44" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
-                        <circle cx="90" cy="180" r="30" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".6"/>
-                        <circle cx="90" cy="178" r="16" fill="none" stroke="var(--accent)" stroke-width=".8" opacity=".4"/>
-                        <path d="M78 165Q90 174 102 165" fill="none" stroke="var(--accent)" stroke-width="1" stroke-linecap="round" opacity=".5"/>
-                        <line x1="90" y1="132" x2="90" y2="116" stroke="var(--accent)" stroke-width="1.4" stroke-linecap="round"/>
-                        <line x1="90" y1="228" x2="90" y2="244" stroke="var(--accent)" stroke-width="1.4" stroke-linecap="round"/>
-                        <line x1="42" y1="180" x2="28" y2="180" stroke="var(--accent)" stroke-width="1.4" stroke-linecap="round"/>
-                        <line x1="138" y1="180" x2="152" y2="180" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" opacity=".7"/>
-                        <line x1="63" y1="133" x2="52" y2="122" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/>
-                        <line x1="117" y1="133" x2="128" y2="122" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/>
-                        <line x1="63" y1="187" x2="52" y2="198" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/>
-                        <line x1="117" y1="187" x2="128" y2="198" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/>
-                    </g>
-                    <text x="90" y="260" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="var(--text3)" letter-spacing="1">2023</text>
-                    <g id="pl1" class="sol-click" transform="translate(250,180)" onclick="showPlanet('pl1')">
-                        <animateTransform attributeName="transform" type="translate" values="250,180;250,174;250,180" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
-                        <circle r="20" fill="none" stroke="rgba(160,150,200,.8)" stroke-width="1.4"/>
-                        <circle cx="-4" cy="-5" r="4" fill="none" stroke="rgba(160,150,200,.5)" stroke-width=".8" clip-path="url(#c1)"/>
-                        <circle cx="5" cy="4" r="2.5" fill="none" stroke="rgba(160,150,200,.4)" stroke-width=".7" clip-path="url(#c1)"/>
-                    </g>
-                    <g onclick="showPlanet('pl1')" style="cursor:pointer" class="planet-label-btn">
-                        <rect x="190" y="180" width="120" height="18" fill="transparent" rx="4"/>
-                        <text x="250" y="218" text-anchor="middle" font-family="'DM Mono',monospace" font-size="13" font-weight="500" fill="var(--text2)" letter-spacing=".3" class="label-norm">Bosch Ltd.</text>
-                    </g>
-                    <g id="pl2" class="sol-click" transform="translate(460,180)" onclick="showPlanet('pl2')">
-                        <animateTransform attributeName="transform" type="translate" values="460,180;460,172;460,180" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" begin="1s"/>
-                        <circle r="28" fill="none" stroke="rgba(100,190,200,.85)" stroke-width="1.5"/>
-                        <path d="M-18-4Q-9-8 0-4Q9 0 18-4" fill="none" stroke="rgba(100,190,200,.5)" stroke-width=".9" clip-path="url(#c2)"/>
-                        <path d="M-18 3Q-6-1 0 3Q8 7 18 3" fill="none" stroke="rgba(100,190,200,.6)" stroke-width="1.1" clip-path="url(#c2)"/>
-                        <path d="M-18 10Q-8 6 0 10Q9 14 18 10" fill="none" stroke="rgba(100,190,200,.4)" stroke-width=".8" clip-path="url(#c2)"/>
-                    </g>
-                    <g onclick="showPlanet('pl2')" style="cursor:pointer" class="planet-label-btn">
-                        <rect x="400" y="184" width="120" height="18" fill="transparent" rx="4"/>
-                        <text x="460" y="226" text-anchor="middle" font-family="'DM Mono',monospace" font-size="13" font-weight="500" fill="var(--text2)" letter-spacing=".3" class="label-norm">HS Coburg</text>
-                    </g>
-                    <g id="pl3" class="sol-click" transform="translate(670,180)" onclick="showPlanet('pl3')">
-                        <animateTransform attributeName="transform" type="translate" values="670,180;670,170;670,180" dur="6.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" begin="2s"/>
-                        <ellipse rx="56" ry="10" fill="none" stroke="rgba(249,115,22,.35)" stroke-width="1.2" transform="rotate(-6)"/>
-                        <circle r="38" fill="none" stroke="rgba(249,115,22,.9)" stroke-width="1.6" filter="url(#go)"/>
-                        <path d="M-27-8Q-13-13 0-8Q13-3 27-8" fill="none" stroke="rgba(249,115,22,.5)" stroke-width="1" clip-path="url(#c3)"/>
-                        <path d="M-27 2Q-10-3 0 2Q12 7 27 2" fill="none" stroke="rgba(249,115,22,.6)" stroke-width="1.2" clip-path="url(#c3)"/>
-                    </g>
-                    <g onclick="showPlanet('pl3')" style="cursor:pointer" class="planet-label-btn">
-                        <rect x="610" y="192" width="120" height="18" fill="transparent" rx="4"/>
-                        <text x="670" y="236" text-anchor="middle" font-family="'DM Mono',monospace" font-size="13" font-weight="600" fill="var(--accent)" letter-spacing=".3">Daimler AG</text>
-                    </g>
-                    <g id="pl4" class="sol-click" transform="translate(850,180)" onclick="showPlanet('pl4')">
-                        <animateTransform attributeName="transform" type="translate" values="850,180;850,172;850,180" dur="5.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" begin="3s"/>
-                        <ellipse rx="62" ry="12" fill="none" stroke="rgba(56,189,248,.3)" stroke-width="1.2" transform="rotate(-6)"/>
-                        <circle r="46" fill="none" stroke="rgba(56,189,248,.95)" stroke-width="1.8" filter="url(#gb)"/>
-                        <path d="M-34-10Q-17-16 0-10Q17-4 34-10" fill="none" stroke="rgba(56,189,248,.45)" stroke-width="1" clip-path="url(#c4)"/>
-                        <path d="M-34 0Q-14-6 0 0Q14 6 34 0" fill="none" stroke="rgba(56,189,248,.6)" stroke-width="1.3" clip-path="url(#c4)"/>
-                        <circle r="46" fill="none" stroke="rgba(56,189,248,.15)" stroke-width="6">
-                            <animate attributeName="r" values="46;54;46" dur="3s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values=".4;0;.4" dur="3s" repeatCount="indefinite"/>
-                        </circle>
-                    </g>
-                    <g onclick="showPlanet('pl4')" style="cursor:pointer" class="planet-label-btn">
-                        <text x="850" y="244" text-anchor="middle" font-family="'DM Mono',monospace" font-size="14" font-weight="600" fill="var(--accent2)" letter-spacing=".3">Your Company ✦</text>
-                    </g>
-                    <text x="850" y="256" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="var(--accent2)" opacity=".7">Hiring me?</text>
-                </svg>
-                <div id="pp-pl1" class="planet-popup">
-                    <div class="popup-role">Project Trainee</div>
-                    <div class="popup-co">Bosch Ltd. · Nashik, India</div>
-                    <div class="popup-period">Jan 2023 — Jul 2023</div>
-                    <div class="popup-desc">Designed & deployed a Cognex-based 2D CV pipeline for real-time defect detection of fuel injectors on high-speed conveyors. Reduced production error rate by 95%. Integrated camera, lighting & optics for industrial-grade image acquisition.</div>
-                </div>
-                <div id="pp-pl2" class="planet-popup">
-                    <div class="popup-role">Autonomous Systems Engineer & Scrum Master</div>
-                    <div class="popup-co">Hochschule Coburg · Germany</div>
-                    <div class="popup-period">Oct 2023 — Feb 2025</div>
-                    <div class="popup-desc">Led 8-engineer team building ADAPT, a full-stack AD & automated parking solution with ROS2. YOLO object detection (88% mAP), LiDAR/camera sensor fusion, V2X comms, trajectory planning, CAN actuation. Deployed on NVIDIA Jetson.</div>
-                </div>
-                <div id="pp-pl3" class="planet-popup">
-                    <div class="popup-role">Software & Systems Engineer</div>
-                    <div class="popup-co">Daimler AG · Stuttgart, Germany</div>
-                    <div class="popup-period">Apr 2025 — Sep 2025</div>
-                    <div class="popup-desc">Developed ConvIO an ML framework automating domain-to-zonal E/E architecture for SDVs. 62.8% wiring harness reduction on a real electric truck (377 I/O points). PyQt5 MVC GUI, 10K Monte Carlo validation, Dijkstra routing. International team (DE, US, TR, BR, CN, IN). Thesis: 1.0.</div>
-                </div>
-                <div id="pp-pl4" class="planet-popup">
-                    <div class="popup-role">Your Next Engineer</div>
-                    <div class="popup-co">Could be your company!</div>
-                    <div class="popup-period cur">Available now ✦</div>
-                    <div class="popup-desc">Ready for full-time roles in robotics, AD, AI, software & mechanical engineering. Post-study visa — eligible for immediate employment. Open to relocate.</div>
-                </div>
-            </div>
+<section id="experience">
+    <p class="section-label">03 — Experience</p>
+    <h2 class="section-title">Mission log</h2>
+    <div class="solar-wrap">
+        <div class="solar-svg-wrap">
+            <svg id="solarsys" viewBox="0 0 1200 278" width="100%" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;display:block">
+                <defs>
+                    <filter id="go" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <filter id="gb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <filter id="gs" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <clipPath id="c1"><circle r="20"/></clipPath>
+                    <clipPath id="c2"><circle r="28"/></clipPath>
+                    <clipPath id="c3"><circle r="38"/></clipPath>
+                    <clipPath id="c4"><circle r="46"/></clipPath>
+                </defs>
+                
+                <line x1="155" y1="180" x2="1150" y2="180" stroke="var(--accent)" stroke-width="1.2" stroke-dasharray="6 5" opacity=".5"/>
+                
+                <g filter="url(#gs)">
+                    <circle cx="90" cy="180" r="44" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+                    <circle cx="90" cy="180" r="30" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".6"/>
+                    <circle cx="90" cy="178" r="16" fill="none" stroke="var(--accent)" stroke-width=".8" opacity=".4"/>
+                    <path d="M78 165Q90 174 102 165" fill="none" stroke="var(--accent)" stroke-width="1" stroke-linecap="round" opacity=".5"/>
+                    <line x1="90" y1="132" x2="90" y2="116" stroke="var(--accent)" stroke-width="1.4" stroke-linecap="round"/>
+                    <line x1="90" y1="228" x2="90" y2="244" stroke="var(--accent)" stroke-width="1.4" stroke-linecap="round"/>
+                    <line x1="42" y1="180" x2="28" y2="180" stroke="var(--accent)" stroke-width="1.4" stroke-linecap="round"/>
+                    <line x1="138" y1="180" x2="152" y2="180" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" opacity=".7"/>
+                    <line x1="63" y1="133" x2="52" y2="122" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/>
+                    <line x1="117" y1="133" x2="128" y2="122" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/>
+                    <line x1="63" y1="187" x2="52" y2="198" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/>
+                    <line x1="117" y1="187" x2="128" y2="198" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/>
+                </g>
+                <text x="90" y="260" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="var(--text3)" letter-spacing="1">2023</text>
+
+                <g id="pl1" class="sol-click" transform="translate(300,180)" onclick="showPlanet('pl1')">
+                    <animateTransform attributeName="transform" type="translate" values="300,180;300,174;300,180" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+                    <circle r="20" fill="none" stroke="rgba(160,150,200,.8)" stroke-width="1.4"/>
+                    <circle cx="-4" cy="-5" r="4" fill="none" stroke="rgba(160,150,200,.5)" stroke-width=".8" clip-path="url(#c1)"/>
+                    <circle cx="5" cy="4" r="2.5" fill="none" stroke="rgba(160,150,200,.4)" stroke-width=".7" clip-path="url(#c1)"/>
+                </g>
+                <g onclick="showPlanet('pl1')" style="cursor:pointer" class="planet-label-btn">
+                    <rect x="240" y="180" width="120" height="18" fill="transparent" rx="4"/>
+                    <text x="300" y="218" text-anchor="middle" font-family="'DM Mono',monospace" font-size="13" font-weight="500" fill="var(--text2)" letter-spacing=".3" class="label-norm">Bosch Ltd.</text>
+                </g>
+
+                <g id="pl2" class="sol-click" transform="translate(560,180)" onclick="showPlanet('pl2')">
+                    <animateTransform attributeName="transform" type="translate" values="560,180;560,172;560,180" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" begin="1s"/>
+                    <circle r="28" fill="none" stroke="rgba(100,190,200,.85)" stroke-width="1.5"/>
+                    <path d="M-18-4Q-9-8 0-4Q9 0 18-4" fill="none" stroke="rgba(100,190,200,.5)" stroke-width=".9" clip-path="url(#c2)"/>
+                    <path d="M-18 3Q-6-1 0 3Q8 7 18 3" fill="none" stroke="rgba(100,190,200,.6)" stroke-width="1.1" clip-path="url(#c2)"/>
+                    <path d="M-18 10Q-8 6 0 10Q9 14 18 10" fill="none" stroke="rgba(100,190,200,.4)" stroke-width=".8" clip-path="url(#c2)"/>
+                </g>
+                <g onclick="showPlanet('pl2')" style="cursor:pointer" class="planet-label-btn">
+                    <rect x="500" y="184" width="120" height="18" fill="transparent" rx="4"/>
+                    <text x="560" y="226" text-anchor="middle" font-family="'DM Mono',monospace" font-size="13" font-weight="500" fill="var(--text2)" letter-spacing=".3" class="label-norm">HS Coburg</text>
+                </g>
+
+                <g id="pl3" class="sol-click" transform="translate(820,180)" onclick="showPlanet('pl3')">
+                    <animateTransform attributeName="transform" type="translate" values="820,180;820,170;820,180" dur="6.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" begin="2s"/>
+                    <ellipse rx="56" ry="10" fill="none" stroke="rgba(249,115,22,.35)" stroke-width="1.2" transform="rotate(-6)"/>
+                    <circle r="38" fill="none" stroke="rgba(249,115,22,.9)" stroke-width="1.6" filter="url(#go)"/>
+                    <path d="M-27-8Q-13-13 0-8Q13-3 27-8" fill="none" stroke="rgba(249,115,22,.5)" stroke-width="1" clip-path="url(#c3)"/>
+                    <path d="M-27 2Q-10-3 0 2Q12 7 27 2" fill="none" stroke="rgba(249,115,22,.6)" stroke-width="1.2" clip-path="url(#c3)"/>
+                </g>
+                <g onclick="showPlanet('pl3')" style="cursor:pointer" class="planet-label-btn">
+                    <rect x="760" y="192" width="120" height="18" fill="transparent" rx="4"/>
+                    <text x="820" y="236" text-anchor="middle" font-family="'DM Mono',monospace" font-size="13" font-weight="600" fill="var(--accent)" letter-spacing=".3">Daimler AG</text>
+                </g>
+
+                <g id="pl4" class="sol-click" transform="translate(1080,180)" onclick="showPlanet('pl4')">
+                    <animateTransform attributeName="transform" type="translate" values="1080,180;1080,172;1080,180" dur="5.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" begin="3s"/>
+                    <ellipse rx="62" ry="12" fill="none" stroke="rgba(56,189,248,.3)" stroke-width="1.2" transform="rotate(-6)"/>
+                    <circle r="46" fill="none" stroke="rgba(56,189,248,.95)" stroke-width="1.8" filter="url(#gb)"/>
+                    <path d="M-34-10Q-17-16 0-10Q17-4 34-10" fill="none" stroke="rgba(56,189,248,.45)" stroke-width="1" clip-path="url(#c4)"/>
+                    <path d="M-34 0Q-14-6 0 0Q14 6 34 0" fill="none" stroke="rgba(56,189,248,.6)" stroke-width="1.3" clip-path="url(#c4)"/>
+                    <circle r="46" fill="none" stroke="rgba(56,189,248,.15)" stroke-width="6">
+                        <animate attributeName="r" values="46;54;46" dur="3s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values=".4;0;.4" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                </g>
+                <g onclick="showPlanet('pl4')" style="cursor:pointer" class="planet-label-btn">
+                    <text x="1080" y="244" text-anchor="middle" font-family="'DM Mono',monospace" font-size="14" font-weight="600" fill="var(--accent2)" letter-spacing=".3">Your Company ✦</text>
+                </g>
+                <text x="1080" y="256" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="var(--accent2)" opacity=".7">Hiring me?</text>
+            </svg>
+            
+            <div id="pp-pl1" class="planet-popup"><div class="popup-role">Project Trainee</div><div class="popup-co">Bosch Ltd. · Nashik, India</div><div class="popup-period">Jan 2023 — Jul 2023</div><div class="popup-desc">Designed & deployed a Cognex-based 2D CV pipeline for real-time defect detection of fuel injectors on high-speed conveyors. Reduced production error rate by 95%. Integrated camera, lighting & optics for industrial-grade image acquisition.</div></div>
+            <div id="pp-pl2" class="planet-popup"><div class="popup-role">Autonomous Systems Engineer & Scrum Master</div><div class="popup-co">Hochschule Coburg · Germany</div><div class="popup-period">Oct 2023 — Feb 2025</div><div class="popup-desc">Led 8-engineer team building ADAPT — a full-stack AD & automated parking solution with ROS2. YOLO object detection (88% mAP), LiDAR/camera sensor fusion, V2X comms, trajectory planning, CAN actuation. Deployed on NVIDIA Jetson. Tested in CARLA & SUMO.</div></div>
+            <div id="pp-pl3" class="planet-popup"><div class="popup-role">Software & Systems Engineer</div><div class="popup-co">Daimler AG · Stuttgart, Germany</div><div class="popup-period">Apr 2025 — Sep 2025</div><div class="popup-desc">Developed ConvIO — ML framework automating domain-to-zonal E/E architecture for SDVs. 62.8% wiring harness reduction on a real electric truck (377 I/O points). PyQt5 MVC GUI, 10K Monte Carlo validation, Dijkstra routing. International team (DE, US, TR, BR, CN, IN). Thesis: 1.0.</div></div>
+            <div id="pp-pl4" class="planet-popup"><div class="popup-role">Your Next Engineer</div><div class="popup-co">Could be your company!</div><div class="popup-period cur" style="margin-bottom: 15px;">Available now ✦</div><div class="popup-desc">Ready for full-time roles in robotics, AD, AI, software & mechanical engineering. Post-study visa, eligible for immediate employment. Open to relocate.</div></div>
         </div>
-        <p style="font-family:'DM Mono',monospace;font-size:.8rem;color:var(--text2);text-align:center;margin-top:4px;letter-spacing:.06em">↑ click a planet to explore</p>
-    </section>
+    </div>
+    <p style="font-family:'DM Mono',monospace;font-size:.8rem;color:var(--text2);text-align:center;margin-top:4px;letter-spacing:.06em">↑ click a planet to explore</p>
+</section>
 
     <div class="section-divider"></div>
 
@@ -1993,8 +1962,8 @@
             const w = document.querySelector(".solar-svg-wrap");
             const wr = w.getBoundingClientRect();
             
-            const xM = { pl1: 250, pl2: 460, pl3: 670, pl4: 850 };
-            const xF = xM[id] / 900;
+            const xM = { pl1: 300, pl2: 560, pl3: 820, pl4: 1000 };
+            const xF = xM[id] / 1200;
             const xP = (xF * sr.width) + (sr.left - wr.left);
             const tP = (sr.bottom - wr.top) + 12;
             
