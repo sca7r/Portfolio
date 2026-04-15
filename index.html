@@ -1973,27 +1973,35 @@
         tIcon.textContent = currentTheme === "dark" ? "☀" : "🌙";
         tLabel.textContent = currentTheme === "dark" ? "Light" : "Dark";
 
+// Manual Toggle Function
         function toggleTheme() {
             const isDark = h.getAttribute("data-theme") === "dark";
             const newTheme = isDark ? "light" : "dark";
     
             h.setAttribute("data-theme", newTheme);
-            localStorage.setItem("theme", newTheme);
+            localStorage.setItem("theme", newTheme); 
     
             tIcon.textContent = newTheme === "dark" ? "☀" : "🌙";
             tLabel.textContent = newTheme === "dark" ? "Light" : "Dark";
         }
 
-// Listen for OS theme changes in real-time
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-    // Only auto-switch if the user hasn't manually clicked the toggle
-    if (!localStorage.getItem('theme')) {
-        const newTheme = e.matches ? 'dark' : 'light';
-        h.setAttribute('data-theme', newTheme);
-        tIcon.textContent = newTheme === "dark" ? "☀" : "🌙";
-        tLabel.textContent = newTheme === "dark" ? "Light" : "Dark";
-    }
-});
+// OS Theme Change Handler
+        function handleSystemThemeChange(e) {
+            if (!localStorage.getItem('theme')) {
+                const newTheme = e.matches ? 'dark' : 'light';
+                h.setAttribute('data-theme', newTheme);
+                tIcon.textContent = newTheme === "dark" ? "☀" : "🌙";
+                tLabel.textContent = newTheme === "dark" ? "Light" : "Dark";
+            }
+        }
+
+
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        if (mediaQuery.addEventListener) {
+            mediaQuery.addEventListener('change', handleSystemThemeChange);
+        } else if (mediaQuery.addListener) {
+            mediaQuery.addListener(handleSystemThemeChange);
+        }
 
         // --- Mobile Menu Toggle ---
         function toggleMenu() {
