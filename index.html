@@ -399,7 +399,7 @@
         .about-intro { font-size: .96rem; line-height: 1.8; color: var(--ink2); margin-bottom: .95rem; }
         .about-intro strong { color: var(--ink); font-weight: 600; }
 
-        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin-top: 1.4rem; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: .75rem; margin-top: 1.4rem; }
         .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; padding: 1rem; transition: border-color .2s, transform .2s; }
         .stat:hover { border-color: var(--accent); transform: translateY(-3px); }
         .stat-num { font-family: "JetBrains Mono", monospace; font-size: 1.7rem; font-weight: 700; color: var(--accent-text); }
@@ -556,7 +556,7 @@
         <div class="typewriter-wrap rise" style="animation-delay:.5s">
             <span id="tw"></span><span class="cur"></span>
         </div>
-        <p class="hero-desc rise" style="animation-delay:.6s">Building systems that don't need me. Still looking for a job though.<br><br>Mechanical engineer turned AI &amp; robotics systems builder. I make machines <strong>see</strong>, robots <strong>move</strong>, and vehicles <strong>decide</strong>, with the hardware background to back the software.</p>
+        <p class="hero-desc rise" style="animation-delay:.6s">Building systems that don't need me. Still looking for a job though.<br><br>Mechanical engineer turned AI systems builder. I make machines <strong>see</strong>, robots <strong>move</strong>, vehicles <strong>decide</strong>, and agents <strong>reason</strong>, with the hardware background to back the software.</p>
         <div class="hero-ctas rise" style="animation-delay:.7s">
             <a href="#contact" class="btn btn-primary">Get in touch</a>
             <a href="#projects" class="btn btn-ghost">See my work</a>
@@ -588,9 +588,11 @@
             </div>
             <p class="about-intro">I'm <strong>Harshawardhan Patil</strong>, but Harsh works just fine (unless I break production, then it's "the new guy"). Recent M.Eng. grad in <strong>Autonomous Driving</strong> from Hochschule Coburg (Grade 1.9, Thesis 1.0 at Daimler AG), with a mechanical engineering backbone and a dangerous obsession with making machines intelligent.</p>
             <p class="about-intro">From building computer vision defect-detection systems at <strong>Bosch</strong>, to developing zonal E/E architecture tools at <strong>Daimler AG</strong>, to leading an 8-person autonomous driving team building a robot from scratch: I thrive where <strong>hardware meets software meets AI</strong>. Also, I captain football teams and play in a German Kreisliga. Multitasking is kind of my thing.</p>
+            <p class="about-intro">Outside of automotive, I build with <strong>generative &amp; agentic AI</strong> for fun and for keeps: local LLM agents with tool orchestration, RAG pipelines, and eval-driven copilots that get judged on adversarial test cases before they ship, not after.</p>
             <div class="stats">
                 <div class="stat"><div class="stat-num">1.0</div><div class="stat-lbl">Thesis Grade</div></div>
                 <div class="stat"><div class="stat-num">88%</div><div class="stat-lbl">mAP, Object Detection</div></div>
+                <div class="stat"><div class="stat-num">18</div><div class="stat-lbl">Adversarial LLM Evals</div></div>
                 <div class="stat"><div class="stat-num">95%</div><div class="stat-lbl">Error Reduced, Perception</div></div>
             </div>
         </div>
@@ -608,11 +610,15 @@
                 <div class="tags"><span class="tag">Python</span><span class="tag">C/C++</span><span class="tag">MATLAB</span><span class="tag">Bash</span><span class="tag">CMake</span><span class="tag">Go</span><span class="tag">C#</span></div>
             </div>
             <div class="sg">
-                <div class="sg-title"><span class="dot" style="background:#0284c7"></span>AI / ML / Deep Learning</div>
-                <div class="tags"><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">OpenCV</span><span class="tag">MediaPipe</span><span class="tag">Scikit-learn</span><span class="tag">LangChain</span><span class="tag">Ollama</span><span class="tag">YOLO</span><span class="tag">DetectNet</span><span class="tag">ONNX</span><span class="tag">Computer Vision</span><span class="tag">CNNs</span><span class="tag">Transformers</span><span class="tag">Prompt Engineering</span><span class="tag">Model Optimization</span></div>
+                <div class="sg-title"><span class="dot" style="background:#0284c7"></span>Generative &amp; Agentic AI</div>
+                <div class="tags"><span class="tag">LangChain</span><span class="tag">Ollama</span><span class="tag">Agentic Workflows (ReAct)</span><span class="tag">RAG</span><span class="tag">Vector DBs (Qdrant)</span><span class="tag">Prompt Engineering</span><span class="tag">Context Engineering</span><span class="tag">LLM Evals</span><span class="tag">Transformers</span><span class="tag">Multi-Agent Systems</span></div>
             </div>
             <div class="sg">
-                <div class="sg-title"><span class="dot" style="background:#7c3aed"></span>Robotics &amp; Autonomous Driving</div>
+                <div class="sg-title"><span class="dot" style="background:#7c3aed"></span>AI / Computer Vision / Deep Learning</div>
+                <div class="tags"><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">OpenCV</span><span class="tag">MediaPipe</span><span class="tag">Scikit-learn</span><span class="tag">YOLO</span><span class="tag">DetectNet</span><span class="tag">ONNX</span><span class="tag">CNNs</span><span class="tag">Model Optimization</span></div>
+            </div>
+            <div class="sg">
+                <div class="sg-title"><span class="dot" style="background:#047857"></span>Robotics &amp; Autonomous Driving</div>
                 <div class="tags"><span class="tag">ROS2</span><span class="tag">Sensor Fusion</span><span class="tag">SLAM</span><span class="tag">Path Planning</span><span class="tag">LiDAR</span><span class="tag">V2X (ETSI ITS)</span><span class="tag">CARLA</span><span class="tag">SUMO</span><span class="tag">NVIDIA Jetson</span><span class="tag">OptiTrack</span><span class="tag">CAN Bus</span><span class="tag">Trajectory Planning</span></div>
             </div>
             <div class="sg">
@@ -620,11 +626,11 @@
                 <div class="tags"><span class="tag">AUTOSAR</span><span class="tag">ISO 26262</span><span class="tag">A-SPICE</span><span class="tag">Zonal E/E Architecture</span><span class="tag">V-Model</span><span class="tag">Requirements Engineering</span><span class="tag">FMEA</span></div>
             </div>
             <div class="sg">
-                <div class="sg-title"><span class="dot" style="background:#047857"></span>Mechanical / CAD / CAE</div>
+                <div class="sg-title"><span class="dot" style="background:#be185d"></span>Mechanical / CAD / CAE</div>
                 <div class="tags"><span class="tag">SolidWorks</span><span class="tag">Siemens NX</span><span class="tag">CATIA V5</span><span class="tag">AutoCAD</span><span class="tag">ANSYS</span><span class="tag">PTC Creo</span><span class="tag">GD&amp;T</span><span class="tag">FEA</span><span class="tag">Simulink</span></div>
             </div>
             <div class="sg">
-                <div class="sg-title"><span class="dot" style="background:#be185d"></span>DevOps &amp; Tools</div>
+                <div class="sg-title"><span class="dot" style="background:#334155"></span>DevOps &amp; Tools</div>
                 <div class="tags"><span class="tag">Git / GitHub</span><span class="tag">Docker</span><span class="tag">Linux</span><span class="tag">CI/CD</span><span class="tag">FastAPI</span><span class="tag">Flask</span><span class="tag">PyQt5</span><span class="tag">REST APIs</span><span class="tag">Agile / Scrum</span></div>
             </div>
         </div>
@@ -697,6 +703,13 @@
                 <a href="https://github.com/sca7r/Zonal-convergence-gui" target="_blank" class="proj-link">GitHub ↗</a>
             </div>
             <div class="pcard">
+                <div class="picon">🤖</div>
+                <div class="pname">LokalAgent — Agentic AI</div>
+                <div class="pdesc">Local privacy-first MoE AI system. ReAct reasoning, dynamic RAM management (8–10 GB), tool orchestration. Runs fully offline on consumer hardware.</div>
+                <div class="ptags"><span class="ptag">Python</span><span class="ptag">LangChain</span><span class="ptag">Ollama</span><span class="ptag">Docker</span><span class="ptag">REST APIs</span></div>
+                <a href="https://github.com/sca7r/LokalAgent--Local-Agentic-AI-with-Ollama-LangChain" target="_blank" class="proj-link">GitHub ↗</a>
+            </div>
+            <div class="pcard">
                 <div class="picon">🚗</div>
                 <div class="pname">ADAPT — Autonomous Vehicle</div>
                 <div class="pdesc">Full-stack AD with smart parking. YOLO (88% mAP), sensor fusion, V2X, pure-pursuit control, CAN actuation. Deployed on NVIDIA Jetson hardware.</div>
@@ -704,11 +717,11 @@
                 <a href="https://github.com/sca7r/work-in-autonomous-driving" target="_blank" class="proj-link">GitHub ↗</a>
             </div>
             <div class="pcard">
-                <div class="picon">🦾</div>
-                <div class="pname">Vision-Guided Robotic Manipulation</div>
-                <div class="pdesc">End-to-end robotic manipulation framework featuring a custom 6-DOF arm, ROS 2 Jazzy, MoveIt 2 motion planning, Gazebo simulation, and RGB-D perception for autonomous pick-and-place with a simulation-to-real architecture.</div>
-                <div class="ptags"><span class="ptag">ROS 2</span><span class="ptag">MoveIt 2</span><span class="ptag">Gazebo Harmonic</span><span class="ptag">RGB-D Vision</span></div>
-                <a href="https://github.com/sca7r/vision-robotic-arm" target="_blank" class="proj-link">GitHub ↗</a>
+                <div class="picon">🛡️</div>
+                <div class="pname">Claims Copilot — AI Context Engineering</div>
+                <div class="pdesc">AI copilot for insurance claims handlers, built on context engineering principles. Skill-based routing, regulatory guardrails, smart policy detection, streaming inference, and a fully local eval pipeline with Claude-as-judge scoring across 18 adversarial test cases.</div>
+                <div class="ptags"><span class="ptag">Python</span><span class="ptag">Ollama</span><span class="ptag">deepseek-r1</span><span class="ptag">Streamlit</span><span class="ptag">Context Engineering</span><span class="ptag">LLM Evals</span><span class="ptag">Insurance AI</span></div>
+                <a href="https://github.com/sca7r/claims-copilot" target="_blank" class="proj-link">GitHub ↗</a>
             </div>
             <div class="pcard">
                 <div class="picon">🚗</div>
@@ -718,11 +731,18 @@
                 <a href="https://github.com/sca7r/DepthTrack" target="_blank" class="proj-link">GitHub ↗</a>
             </div>
             <div class="pcard">
-                <div class="picon">🤖</div>
-                <div class="pname">LokalAgent — Agentic AI</div>
-                <div class="pdesc">Local privacy-first MoE AI system. ReAct reasoning, dynamic RAM management (8–10 GB), tool orchestration. Runs fully offline on consumer hardware.</div>
-                <div class="ptags"><span class="ptag">Python</span><span class="ptag">LangChain</span><span class="ptag">Ollama</span><span class="ptag">Docker</span><span class="ptag">REST APIs</span></div>
-                <a href="https://github.com/sca7r/LokalAgent--Local-Agentic-AI-with-Ollama-LangChain" target="_blank" class="proj-link">GitHub ↗</a>
+                <div class="picon">📄</div>
+                <div class="pname">Local RAG for PDFs</div>
+                <div class="pdesc">Document Q&amp;A with local LLMs, Qdrant vector DB, Docker. ONNX INT8 quantized cross-encoder for 3–4x speedup. Server-Sent Events for real-time streaming.</div>
+                <div class="ptags"><span class="ptag">Python</span><span class="ptag">FastAPI</span><span class="ptag">Qdrant</span><span class="ptag">Docker</span><span class="ptag">ONNX</span></div>
+                <a href="https://github.com/sca7r/Local-Embeddings-RAG" target="_blank" class="proj-link">GitHub ↗</a>
+            </div>
+            <div class="pcard">
+                <div class="picon">🦾</div>
+                <div class="pname">Vision-Guided Robotic Manipulation</div>
+                <div class="pdesc">End-to-end robotic manipulation framework featuring a custom 6-DOF arm, ROS 2 Jazzy, MoveIt 2 motion planning, Gazebo simulation, and RGB-D perception for autonomous pick-and-place with a simulation-to-real architecture.</div>
+                <div class="ptags"><span class="ptag">ROS 2</span><span class="ptag">MoveIt 2</span><span class="ptag">Gazebo Harmonic</span><span class="ptag">RGB-D Vision</span></div>
+                <a href="https://github.com/sca7r/vision-robotic-arm" target="_blank" class="proj-link">GitHub ↗</a>
             </div>
             <div class="pcard">
                 <div class="picon">👁</div>
@@ -730,13 +750,6 @@
                 <div class="pdesc">Real-time CV tracking 478 facial + 21 hand landmarks. Eye Aspect Ratio drowsiness detection. FastAPI dashboard with MJPEG streaming &amp; alerts.</div>
                 <div class="ptags"><span class="ptag">Python</span><span class="ptag">OpenCV</span><span class="ptag">MediaPipe</span><span class="ptag">FastAPI</span><span class="ptag">Qt</span></div>
                 <a href="https://github.com/sca7r/hand-and-face-tracking-with-sleep-awake-detection" target="_blank" class="proj-link">GitHub ↗</a>
-            </div>
-            <div class="pcard">
-                <div class="picon">📄</div>
-                <div class="pname">Local RAG for PDFs</div>
-                <div class="pdesc">Document Q&amp;A with local LLMs, Qdrant vector DB, Docker. ONNX INT8 quantized cross-encoder for 3–4x speedup. Server-Sent Events for real-time streaming.</div>
-                <div class="ptags"><span class="ptag">Python</span><span class="ptag">FastAPI</span><span class="ptag">Qdrant</span><span class="ptag">Docker</span><span class="ptag">ONNX</span></div>
-                <a href="https://github.com/sca7r/Local-Embeddings-RAG" target="_blank" class="proj-link">GitHub ↗</a>
             </div>
             <div class="pcard">
                 <div class="picon">📡</div>
@@ -776,16 +789,9 @@
             <div class="pcard">
                 <div class="picon">📊</div>
                 <div class="pname">Requirements Tracker — Full-Stack System</div>
-                <div class="pdesc">Enterprise-grade requirements management platform with MoSCoW prioritization, lifecycle workflows, and effort estimation. Built on ASP.NET Core and React with a strongly typed API contract and scalable architecture.</div>
+                <div class="pdesc">Requirements management platform with MoSCoW prioritization, lifecycle workflows, and effort estimation. Built on ASP.NET Core and React with a strongly typed API contract.</div>
                 <div class="ptags"><span class="ptag">ASP.NET Core</span><span class="ptag">C#</span><span class="ptag">React</span><span class="ptag">TypeScript</span><span class="ptag">REST API</span><span class="ptag">EF Core</span><span class="ptag">PostgreSQL</span></div>
                 <a href="https://github.com/sca7r/Requirements-Tracker" target="_blank" class="proj-link">GitHub ↗</a>
-            </div>
-            <div class="pcard">
-                <div class="picon">🛡️</div>
-                <div class="pname">Claims Copilot — AI Context Engineering</div>
-                <div class="pdesc">Production-grade AI copilot for insurance claims handlers, built on context engineering principles. Skill-based routing, regulatory guardrails, smart policy detection, streaming inference, and a fully local eval pipeline with Claude-as-judge scoring across 18 adversarial test cases.</div>
-                <div class="ptags"><span class="ptag">Python</span><span class="ptag">Ollama</span><span class="ptag">deepseek-r1</span><span class="ptag">Streamlit</span><span class="ptag">Context Engineering</span><span class="ptag">LLM Evals</span><span class="ptag">Insurance AI</span></div>
-                <a href="https://github.com/sca7r/claims-copilot" target="_blank" class="proj-link">GitHub ↗</a>
             </div>
             <a href="https://github.com/sca7r" target="_blank" class="pcard pcard-more">
                 <div class="picon" style="border-radius:50%">🔗</div>
