@@ -501,12 +501,14 @@
 
         .pub-card { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; padding: 1.1rem 1.3rem; margin-bottom: .8rem; transition: border-color .2s; }
         .pub-card:hover { border-color: var(--accent); }
+        a.pub-card { display: block; text-decoration: none; color: inherit; }
+        .pub-link { display: inline-flex; align-items: center; gap: 5px; font-family: "JetBrains Mono", monospace; font-size: .68rem; color: var(--accent-text); margin-top: .5rem; }
         .pub-title { font-family: "Archivo", sans-serif; font-weight: 700; font-size: .92rem; margin-bottom: .3rem; }
         .pub-meta { font-family: "JetBrains Mono", monospace; font-size: .7rem; color: var(--accent-text); }
 
         /* ---------- projects ---------- */
 
-        .proj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+        .proj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; align-items: start; }
         .pcard { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; padding: 1.4rem; position: relative; overflow: visible; transition: border-color .2s, transform .2s, box-shadow .2s; }
         .pcard:hover { border-color: var(--scan); transform: translateY(-4px); box-shadow: 0 0 0 1px var(--scan); }
         .pcard[data-tag]::before {
@@ -532,13 +534,14 @@
         .pdemo { margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed var(--line2); }
         .pdemo-label { font-family: "JetBrains Mono", monospace; font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-text); margin-bottom: .5rem; }
         .pmedia { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; border-radius: 2px; border: 1px solid var(--line2); background: var(--surface2); }
+        video.pmedia { object-fit: contain; background: #000; }
         .pmedia-cap { font-family: "JetBrains Mono", monospace; font-size: .68rem; color: var(--ink3); line-height: 1.5; margin-top: .5rem; }
         .pgallery { display: flex; gap: 8px; flex-wrap: wrap; }
         .pgallery figure { flex: 1; min-width: 110px; margin: 0; }
         .pgallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 2px; border: 1px solid var(--line2); display: block; }
         .pgallery figcaption { font-family: "JetBrains Mono", monospace; font-size: .62rem; color: var(--ink3); margin-top: .4rem; }
         .pvideos { display: flex; flex-direction: column; gap: 1rem; }
-        .pvideos video { width: 100%; aspect-ratio: 16/9; border-radius: 2px; border: 1px solid var(--line2); background: #000; display: block; }
+        .pvideos video { width: 100%; aspect-ratio: 16/9; object-fit: contain; border-radius: 2px; border: 1px solid var(--line2); background: #000; display: block; }
         .pvideos figure { margin: 0; }
         .pvideos figcaption { font-family: "JetBrains Mono", monospace; font-size: .62rem; color: var(--ink3); margin-top: .4rem; }
         .proj-lede { font-family: "JetBrains Mono", monospace; font-size: .68rem; color: var(--ink3); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 2rem; max-width: 60ch; }
@@ -563,7 +566,7 @@
         .more-toggle summary::before { content: "+"; color: var(--scan); font-weight: 700; }
         .more-toggle[open] summary::before { content: "–"; }
         .more-toggle summary:hover { border-color: var(--scan); color: var(--scan); }
-        .more-grid { margin-top: 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+        .more-grid { margin-top: 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; align-items: start; }
         .more-grid .pcard { padding: 1.1rem; }
         .more-grid .pname { font-size: .88rem; }
         .more-grid .pdesc { font-size: .78rem; }
@@ -581,9 +584,9 @@
         .hobby { text-align: center; padding: 1.7rem 1.1rem; background: var(--surface); border: 1px solid var(--line); border-radius: 3px; transition: transform .2s, border-color .2s; }
         .hobby:hover { transform: translateY(-3px); border-color: var(--accent); }
         .hobby .ic { font-size: 1.4rem; margin-bottom: .7rem; }
-        .hobby-photo { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin: 0 auto .7rem; display: block; border: 1px solid var(--line2); }
-        .hobby-photo-row { display: flex; justify-content: center; gap: 6px; margin-bottom: .7rem; }
-        .hobby-photo-row .hobby-photo { width: 42px; height: 42px; margin: 0; }
+        .hobby-photo { width: 92px; height: 92px; border-radius: 50%; object-fit: cover; margin: 0 auto .8rem; display: block; border: 1px solid var(--line2); }
+        .hobby-photo-row { display: flex; justify-content: center; gap: 8px; margin-bottom: .8rem; }
+        .hobby-photo-row .hobby-photo { width: 62px; height: 62px; margin: 0; }
         .hobby .t { font-family: "Archivo", sans-serif; font-weight: 700; font-size: .86rem; margin-bottom: .35rem; }
         .hobby .d { font-size: .76rem; color: var(--ink2); line-height: 1.5; }
 
@@ -788,14 +791,16 @@
         </div>
         <div style="margin-top:2.6rem">
             <p class="sheet-meta" style="margin-bottom:1rem;display:block">Publications</p>
-            <div class="pub-card">
+            <a class="pub-card" href="https://ieeexplore.ieee.org/ielx8/6287639/11323511/11585779.pdf?tp=&amp;arnumber=11585779&amp;isnumber=11323511&amp;ref=aHR0cHM6Ly93d3cubGlua2VkaW4uY29tLw==" target="_blank">
                 <div class="pub-title">ConvIO: A Framework for Convergence of I/Os in Automotive Zonal E/E Architectures</div>
-                <div class="pub-meta">IEEE Access · Submitted &amp; Under Review</div>
-            </div>
-            <div class="pub-card">
+                <div class="pub-meta">IEEE Access · Published Jun 2026</div>
+                <div class="pub-link">Read on IEEE Xplore ↗</div>
+            </a>
+            <a class="pub-card" href="https://journals.pan.pl/dlibra/publication/153803/edition/135495/content" target="_blank">
                 <div class="pub-title">Optimizing Cold Box Core Making: Sustainable Approach with Taguchi Technique</div>
                 <div class="pub-meta">Polish Academy of Sciences · Published Jan 2025</div>
-            </div>
+                <div class="pub-link">Read paper ↗</div>
+            </a>
         </div>
     </section>
 
@@ -974,6 +979,11 @@
                     <div class="pdesc">ETSI ITS messaging hub (CAM, CPM, EVCSN). Serialization over ROS2 with low latency &amp; robust error handling for infrastructure-vehicle comms.</div>
                     <div class="ptags"><span class="ptag">C++</span><span class="ptag">ROS2</span><span class="ptag">V2X</span><span class="ptag">ETSI ITS</span></div>
                     <a href="https://github.com/sca7r/work-in-autonomous-driving/tree/main/transceiver" target="_blank" class="proj-link">GitHub ↗</a>
+                    <div class="pdemo">
+                        <div class="pdemo-label">▸ Field test</div>
+                        <img class="pmedia" src="assets/v2x-field-test.jpeg" alt="Field-testing the V2X transceiver rig with a roadside unit antenna, on a laptop outdoors" loading="lazy">
+                        <p class="pmedia-cap">Outdoor test rig: roadside-unit antenna and cellular V2X modem streaming into the transceiver over a live laptop session.</p>
+                    </div>
                 </div>
                 <div class="pcard">
                     <div class="picon">📊</div>
@@ -1002,7 +1012,7 @@
             <div class="hobby"><img class="hobby-photo" src="assets/football.jpeg" alt="Playing football" loading="lazy"><div class="t">Football</div><div class="d">Playing Kreisliga in Germany. Former captain &amp; Player of the Match at Reliance Cup.</div></div>
             <div class="hobby"><div class="hobby-photo-row"><img class="hobby-photo" src="assets/skydiving.jpeg" alt="Skydiving" loading="lazy"><img class="hobby-photo" src="assets/scubadiving.jpeg" alt="Scuba diving" loading="lazy"><img class="hobby-photo" src="assets/bungee.jpeg" alt="Bungee jumping" loading="lazy"></div><div class="t">Trekking &amp; Extreme Sports</div><div class="d">Mountains, altitude, skydiving, scuba diving, and questionable decisions at high speeds.</div></div>
             <div class="hobby"><img class="hobby-photo" src="assets/running.jpeg" alt="Running" loading="lazy"><div class="t">Running</div><div class="d">Chasing PRs and sunrise views through Stuttgart's trails.</div></div>
-            <div class="hobby"><div class="ic">✈️</div><div class="t">Exploring</div><div class="d">Always planning the next trip across Europe.</div></div>
+            <div class="hobby"><div class="hobby-photo-row"><img class="hobby-photo" src="assets/explore1.jpeg" alt="German Christmas market" loading="lazy"><img class="hobby-photo" src="assets/explore2.jpeg" alt="Porsche museum, Stuttgart" loading="lazy"><img class="hobby-photo" src="assets/explore3.jpeg" alt="Eiffel Tower, Paris" loading="lazy"></div><div class="t">Exploring</div><div class="d">Always planning the next trip across Europe.</div></div>
             <div class="hobby"><div class="ic">🍳</div><div class="t">Cooking</div><div class="d">Indian spices meet German efficiency, experimental kitchen engineer.</div></div>
             <div class="hobby"><div class="ic">💻</div><div class="t">Building Stuff</div><div class="d">Side projects, hobby robots, and this very portfolio.</div></div>
         </div>
