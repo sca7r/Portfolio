@@ -508,8 +508,8 @@
 
         /* ---------- projects ---------- */
 
-        .proj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; align-items: start; }
-        .pcard { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; padding: 1.4rem; position: relative; overflow: visible; transition: border-color .2s, transform .2s, box-shadow .2s; }
+        .proj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; align-items: stretch; }
+        .pcard { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 3px; padding: 1.4rem; position: relative; overflow: visible; transition: border-color .2s, transform .2s, box-shadow .2s; }
         .pcard:hover { border-color: var(--scan); transform: translateY(-4px); box-shadow: 0 0 0 1px var(--scan); }
         .pcard[data-tag]::before {
             content: attr(data-tag);
@@ -531,7 +531,7 @@
         }
         .pcard[data-tag]:hover::before { opacity: 1; transform: translateY(0); }
         .picon { width: 40px; height: 40px; border-radius: 2px; background: var(--surface2); border: 1px solid var(--line2); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 1.15rem; }
-        .pdemo { margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed var(--line2); }
+        .pdemo { margin-top: auto; padding-top: 1rem; border-top: 1px dashed var(--line2); }
         .pdemo-label { font-family: "JetBrains Mono", monospace; font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-text); margin-bottom: .5rem; }
         .pmedia { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; border-radius: 2px; border: 1px solid var(--line2); background: var(--surface2); }
         video.pmedia { object-fit: contain; background: #000; }
@@ -567,7 +567,7 @@
         .more-toggle summary::before { content: "+"; color: var(--scan); font-weight: 700; }
         .more-toggle[open] summary::before { content: "–"; }
         .more-toggle summary:hover { border-color: var(--scan); color: var(--scan); }
-        .more-grid { margin-top: 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; align-items: start; }
+        .more-grid { margin-top: 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; align-items: stretch; }
         .more-grid .pcard { padding: 1.1rem; }
         .more-grid .pname { font-size: .88rem; }
         .more-grid .pdesc { font-size: .78rem; }
@@ -846,8 +846,9 @@
                 <div class="ptags"><span class="ptag">Python</span><span class="ptag">LangChain</span><span class="ptag">Ollama</span><span class="ptag">Docker</span><span class="ptag">REST APIs</span></div>
                 <a href="https://github.com/sca7r/LokalAgent--Local-Agentic-AI-with-Ollama-LangChain" target="_blank" class="proj-link">GitHub ↗</a>
                 <div class="pdemo">
-                    <div class="pdemo-label">▸ Repo</div>
-                    <div class="pdemo-empty">Walkthrough in the repo README</div>
+                    <div class="pdemo-label">▸ UI</div>
+                    <img class="pmedia" src="assets/lokalagent-3.jpg" alt="LokalAgent chat interface landing screen" loading="lazy">
+                    <p class="pmedia-cap">Local chat UI: model picker, suggested prompts, and a fully offline inference pipeline.</p>
                 </div>
             </div>
             <div class="pcard" data-tag="COPILOT · 0.96">
@@ -928,18 +929,19 @@
         <details class="more-toggle">
             <summary>+ 8 more builds</summary>
             <div class="more-grid">
-                <div class="pcard">
+                <div class="pcard" data-tag="RAG · 0.93">
                     <div class="picon">📄</div>
                     <div class="pname">Local RAG for PDFs</div>
                     <div class="pdesc">Document Q&amp;A with local LLMs, Qdrant vector DB, Docker. ONNX INT8 quantized cross-encoder for 3–4x speedup. Server-Sent Events for real-time streaming.</div>
                     <div class="ptags"><span class="ptag">Python</span><span class="ptag">FastAPI</span><span class="ptag">Qdrant</span><span class="ptag">Docker</span><span class="ptag">ONNX</span></div>
                     <a href="https://github.com/sca7r/Local-Embeddings-RAG" target="_blank" class="proj-link">GitHub ↗</a>
                     <div class="pdemo">
-                        <div class="pdemo-label">▸ Repo</div>
-                        <div class="pdemo-empty">Walkthrough in the repo README</div>
+                        <div class="pdemo-label">▸ UI</div>
+                        <img class="pmedia" src="assets/local-rag-1.jpg" alt="Local RAG assistant answering a question over an uploaded PDF" loading="lazy">
+                        <p class="pmedia-cap">Ask-your-document UI: answers grounded in the indexed PDF, sources cited inline.</p>
                     </div>
                 </div>
-                <div class="pcard">
+                <div class="pcard" data-tag="DMS · 0.96">
                     <div class="picon">👁</div>
                     <div class="pname">Driver Monitoring System</div>
                     <div class="pdesc">Real-time CV tracking 478 facial + 21 hand landmarks. Eye Aspect Ratio drowsiness detection. FastAPI dashboard with MJPEG streaming &amp; alerts.</div>
@@ -951,18 +953,19 @@
                         <p class="pmedia-cap">Live dashboard: landmark tracking and Eye Aspect Ratio flagging drowsiness in real time.</p>
                     </div>
                 </div>
-                <div class="pcard">
+                <div class="pcard" data-tag="FUSION · 0.95">
                     <div class="picon">📡</div>
                     <div class="pname">Multi-Sensor Fusion</div>
                     <div class="pdesc">LiDAR-camera fusion for object detection. Temporal sync &amp; spatial alignment. Enhanced reliability under dynamic lighting.</div>
                     <div class="ptags"><span class="ptag">C++</span><span class="ptag">Python</span><span class="ptag">LiDAR</span><span class="ptag">Sensor Fusion</span></div>
                     <a href="https://github.com/sca7r/work-in-autonomous-driving" target="_blank" class="proj-link">GitHub ↗</a>
                     <div class="pdemo">
-                        <div class="pdemo-label">▸ Repo</div>
-                        <div class="pdemo-empty">Walkthrough in the repo README</div>
+                        <div class="pdemo-label">▸ RViz</div>
+                        <img class="pmedia" src="assets/multi-sensor-fusion.png" alt="RViz view of fused LiDAR and camera detections around the vehicle" loading="lazy">
+                        <p class="pmedia-cap">Fused detections: color-coded clusters from LiDAR and camera aligned in a shared frame.</p>
                     </div>
                 </div>
-                <div class="pcard">
+                <div class="pcard" data-tag="EV.KIT · 0.91">
                     <div class="picon">🔌</div>
                     <div class="pname">Aakruti — Universal EV Conversion Kit</div>
                     <div class="pdesc">Universal electric powertrain conversion kit for retrofitting existing vehicle platforms. CAD packaging of motor, battery, inverter, transfer case, and VCU with centre-of-gravity and structural layout constraints, plus engineering calculations for drivetrain integration, battery placement, and component selection.</div>
@@ -976,29 +979,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="pcard">
+                <div class="pcard" data-tag="AEB · 0.94">
                     <div class="picon">🛑</div>
                     <div class="pname">Autonomous Emergency Braking</div>
                     <div class="pdesc">Real-time AEB with LiDAR obstacle detection &amp; distance estimation. Braking decision logic with data logging &amp; performance evaluation.</div>
                     <div class="ptags"><span class="ptag">Python</span><span class="ptag">LiDAR</span><span class="ptag">Safety Systems</span></div>
                     <a href="https://github.com/sca7r/work-in-autonomous-driving" target="_blank" class="proj-link">GitHub ↗</a>
                     <div class="pdemo">
-                        <div class="pdemo-label">▸ Repo</div>
-                        <div class="pdemo-empty">Walkthrough in the repo README</div>
+                        <div class="pdemo-label">▸ Trigger &amp; RViz</div>
+                        <img class="pmedia" src="assets/aeb-rviz.png" alt="RViz view of AEB obstacle detections and path in front of the vehicle" loading="lazy">
+                        <p class="pmedia-cap">Detections ahead of the vehicle feeding the braking decision, verified live over <code>/stop</code>.</p>
                     </div>
                 </div>
-                <div class="pcard">
+                <div class="pcard" data-tag="TRAJ · 0.93">
                     <div class="picon">🛤</div>
                     <div class="pname">Trajectory Planning &amp; Parking</div>
                     <div class="pdesc">Waypoint pathfinding with parking maneuvers. Real-time obstacle avoidance via multi-sensor fusion. Smooth transitions &amp; space alignment.</div>
                     <div class="ptags"><span class="ptag">Python</span><span class="ptag">ROS2</span><span class="ptag">Path Planning</span></div>
                     <a href="https://github.com/sca7r/work-in-autonomous-driving/tree/main/trajectory" target="_blank" class="proj-link">GitHub ↗</a>
                     <div class="pdemo">
-                        <div class="pdemo-label">▸ Repo</div>
-                        <div class="pdemo-empty">Walkthrough in the repo README</div>
+                        <div class="pdemo-label">▸ Sims</div>
+                        <div class="pvideos">
+                            <figure><video class="pmedia" src="assets/trajectory.mp4" controls preload="metadata"></video><figcaption>Waypoint pathfinding with real-time obstacle avoidance.</figcaption></figure>
+                            <figure><video class="pmedia" src="assets/parking.mp4" controls preload="metadata"></video><figcaption>Parking maneuver: smooth transitions into the target space.</figcaption></figure>
+                        </div>
                     </div>
                 </div>
-                <div class="pcard">
+                <div class="pcard" data-tag="V2X · 0.96">
                     <div class="picon">📶</div>
                     <div class="pname">V2X Transceiver Module</div>
                     <div class="pdesc">ETSI ITS messaging hub (CAM, CPM, EVCSN). Serialization over ROS2 with low latency &amp; robust error handling for infrastructure-vehicle comms.</div>
@@ -1008,9 +1015,11 @@
                         <div class="pdemo-label">▸ Field test</div>
                         <img class="pmedia" src="assets/v2x-field-test.jpeg" alt="Field-testing the V2X transceiver rig with a roadside unit antenna, on a laptop outdoors" loading="lazy">
                         <p class="pmedia-cap">Outdoor test rig: roadside-unit antenna and cellular V2X modem streaming into the transceiver over a live laptop session.</p>
+                        <img class="pmedia" style="margin-top:.6rem" src="assets/v2x-architecture.jpeg" alt="V2X system architecture diagram showing perception-to-CPM pipeline between two OBUs" loading="lazy">
+                        <p class="pmedia-cap">Pipeline: detections serialized into an ETSI CPM, sent raw over the air, and rebuilt into ROS2 markers on the receiving OBU.</p>
                     </div>
                 </div>
-                <div class="pcard">
+                <div class="pcard" data-tag="REQ.TRACK · 0.90">
                     <div class="picon">📊</div>
                     <div class="pname">Requirements Tracker — Full-Stack System</div>
                     <div class="pdesc">Requirements management platform with MoSCoW prioritization, lifecycle workflows, and effort estimation. Built on ASP.NET Core and React with a strongly typed API contract.</div>
