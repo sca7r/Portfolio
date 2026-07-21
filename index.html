@@ -535,6 +535,7 @@
         .pdemo-label { font-family: "JetBrains Mono", monospace; font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-text); margin-bottom: .5rem; }
         .pmedia { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; border-radius: 2px; border: 1px solid var(--line2); background: var(--surface2); }
         video.pmedia { object-fit: contain; background: #000; }
+        .pdemo-empty { width: 100%; aspect-ratio: 16/9; border: 1px dashed var(--line2); border-radius: 2px; background: var(--surface2); display: flex; align-items: center; justify-content: center; font-family: "JetBrains Mono", monospace; font-size: .68rem; color: var(--ink3); text-align: center; padding: 0 1rem; }
         .pmedia-cap { font-family: "JetBrains Mono", monospace; font-size: .68rem; color: var(--ink3); line-height: 1.5; margin-top: .5rem; }
         .pgallery { display: flex; gap: 8px; flex-wrap: wrap; }
         .pgallery figure { flex: 1; min-width: 110px; margin: 0; }
@@ -580,13 +581,13 @@
 
         /* ---------- hobbies ---------- */
 
-        .hobby-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+        .hobby-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
         .hobby { text-align: center; padding: 1.7rem 1.1rem; background: var(--surface); border: 1px solid var(--line); border-radius: 3px; transition: transform .2s, border-color .2s; }
         .hobby:hover { transform: translateY(-3px); border-color: var(--accent); }
         .hobby .ic { font-size: 1.4rem; margin-bottom: .7rem; }
-        .hobby-photo { width: 92px; height: 92px; border-radius: 50%; object-fit: cover; margin: 0 auto .8rem; display: block; border: 1px solid var(--line2); }
-        .hobby-photo-row { display: flex; justify-content: center; gap: 8px; margin-bottom: .8rem; }
-        .hobby-photo-row .hobby-photo { width: 62px; height: 62px; margin: 0; }
+        .hobby-photo { width: 116px; height: 116px; border-radius: 50%; object-fit: cover; margin: 0 auto .8rem; display: block; border: 1px solid var(--line2); }
+        .hobby-photo-row { display: flex; justify-content: center; gap: 10px; margin-bottom: .8rem; }
+        .hobby-photo-row .hobby-photo { width: 76px; height: 76px; margin: 0; }
         .hobby .t { font-family: "Archivo", sans-serif; font-weight: 700; font-size: .86rem; margin-bottom: .35rem; }
         .hobby .d { font-size: .76rem; color: var(--ink2); line-height: 1.5; }
 
@@ -844,6 +845,10 @@
                 <div class="pdesc">Local privacy-first MoE AI system. ReAct reasoning, dynamic RAM management (8–10 GB), tool orchestration. Runs fully offline on consumer hardware.</div>
                 <div class="ptags"><span class="ptag">Python</span><span class="ptag">LangChain</span><span class="ptag">Ollama</span><span class="ptag">Docker</span><span class="ptag">REST APIs</span></div>
                 <a href="https://github.com/sca7r/LokalAgent--Local-Agentic-AI-with-Ollama-LangChain" target="_blank" class="proj-link">GitHub ↗</a>
+                <div class="pdemo">
+                    <div class="pdemo-label">▸ Repo</div>
+                    <div class="pdemo-empty">Walkthrough in the repo README</div>
+                </div>
             </div>
             <div class="pcard" data-tag="COPILOT · 0.96">
                 <div class="picon">🛡️</div>
@@ -851,6 +856,10 @@
                 <div class="pdesc">AI copilot for insurance claims handlers, built on context engineering principles. Skill-based routing, regulatory guardrails, streaming inference, and a fully local eval pipeline with Claude-as-judge scoring across 18 adversarial test cases.</div>
                 <div class="ptags"><span class="ptag">Python</span><span class="ptag">Ollama</span><span class="ptag">deepseek-r1</span><span class="ptag">Streamlit</span><span class="ptag">Context Engineering</span><span class="ptag">LLM Evals</span></div>
                 <a href="https://github.com/sca7r/claims-copilot" target="_blank" class="proj-link">GitHub ↗</a>
+                <div class="pdemo">
+                    <div class="pdemo-label">▸ Repo</div>
+                    <div class="pdemo-empty">Walkthrough in the repo README</div>
+                </div>
             </div>
             <div class="pcard" data-tag="MANIPULATOR · 0.94">
                 <div class="picon">🦾</div>
@@ -925,6 +934,10 @@
                     <div class="pdesc">Document Q&amp;A with local LLMs, Qdrant vector DB, Docker. ONNX INT8 quantized cross-encoder for 3–4x speedup. Server-Sent Events for real-time streaming.</div>
                     <div class="ptags"><span class="ptag">Python</span><span class="ptag">FastAPI</span><span class="ptag">Qdrant</span><span class="ptag">Docker</span><span class="ptag">ONNX</span></div>
                     <a href="https://github.com/sca7r/Local-Embeddings-RAG" target="_blank" class="proj-link">GitHub ↗</a>
+                    <div class="pdemo">
+                        <div class="pdemo-label">▸ Repo</div>
+                        <div class="pdemo-empty">Walkthrough in the repo README</div>
+                    </div>
                 </div>
                 <div class="pcard">
                     <div class="picon">👁</div>
@@ -944,6 +957,10 @@
                     <div class="pdesc">LiDAR-camera fusion for object detection. Temporal sync &amp; spatial alignment. Enhanced reliability under dynamic lighting.</div>
                     <div class="ptags"><span class="ptag">C++</span><span class="ptag">Python</span><span class="ptag">LiDAR</span><span class="ptag">Sensor Fusion</span></div>
                     <a href="https://github.com/sca7r/work-in-autonomous-driving" target="_blank" class="proj-link">GitHub ↗</a>
+                    <div class="pdemo">
+                        <div class="pdemo-label">▸ Repo</div>
+                        <div class="pdemo-empty">Walkthrough in the repo README</div>
+                    </div>
                 </div>
                 <div class="pcard">
                     <div class="picon">🔌</div>
@@ -965,6 +982,10 @@
                     <div class="pdesc">Real-time AEB with LiDAR obstacle detection &amp; distance estimation. Braking decision logic with data logging &amp; performance evaluation.</div>
                     <div class="ptags"><span class="ptag">Python</span><span class="ptag">LiDAR</span><span class="ptag">Safety Systems</span></div>
                     <a href="https://github.com/sca7r/work-in-autonomous-driving" target="_blank" class="proj-link">GitHub ↗</a>
+                    <div class="pdemo">
+                        <div class="pdemo-label">▸ Repo</div>
+                        <div class="pdemo-empty">Walkthrough in the repo README</div>
+                    </div>
                 </div>
                 <div class="pcard">
                     <div class="picon">🛤</div>
@@ -972,6 +993,10 @@
                     <div class="pdesc">Waypoint pathfinding with parking maneuvers. Real-time obstacle avoidance via multi-sensor fusion. Smooth transitions &amp; space alignment.</div>
                     <div class="ptags"><span class="ptag">Python</span><span class="ptag">ROS2</span><span class="ptag">Path Planning</span></div>
                     <a href="https://github.com/sca7r/work-in-autonomous-driving/tree/main/trajectory" target="_blank" class="proj-link">GitHub ↗</a>
+                    <div class="pdemo">
+                        <div class="pdemo-label">▸ Repo</div>
+                        <div class="pdemo-empty">Walkthrough in the repo README</div>
+                    </div>
                 </div>
                 <div class="pcard">
                     <div class="picon">📶</div>
@@ -991,6 +1016,10 @@
                     <div class="pdesc">Requirements management platform with MoSCoW prioritization, lifecycle workflows, and effort estimation. Built on ASP.NET Core and React with a strongly typed API contract.</div>
                     <div class="ptags"><span class="ptag">ASP.NET Core</span><span class="ptag">C#</span><span class="ptag">React</span><span class="ptag">TypeScript</span><span class="ptag">PostgreSQL</span></div>
                     <a href="https://github.com/sca7r/Requirements-Tracker" target="_blank" class="proj-link">GitHub ↗</a>
+                    <div class="pdemo">
+                        <div class="pdemo-label">▸ Repo</div>
+                        <div class="pdemo-empty">Walkthrough in the repo README</div>
+                    </div>
                 </div>
                 <a href="https://github.com/sca7r" target="_blank" class="pcard pcard-more">
                     <div class="picon" style="border-radius:50%">🔗</div>
