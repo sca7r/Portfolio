@@ -405,7 +405,9 @@
             font-weight: 900;
             font-size: 3.6rem;
             color: var(--accent-text);
+            overflow: hidden;
         }
+        .plate-face img { width: 100%; height: 100%; object-fit: cover; }
         .plate-id {
             text-align: center;
             margin-top: 1rem;
@@ -527,11 +529,18 @@
         }
         .pcard[data-tag]:hover::before { opacity: 1; transform: translateY(0); }
         .picon { width: 40px; height: 40px; border-radius: 2px; background: var(--surface2); border: 1px solid var(--line2); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 1.15rem; }
-        .pmedia { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; border-radius: 2px; border: 1px solid var(--line2); background: var(--surface2); margin-bottom: 1rem; }
-        .pgallery { display: flex; gap: 4px; margin-bottom: 1rem; }
-        .pgallery img { flex: 1; min-width: 0; aspect-ratio: 4/3; object-fit: cover; border-radius: 2px; border: 1px solid var(--line2); }
-        .pvideos { display: flex; flex-direction: column; gap: 6px; margin-bottom: 1rem; }
-        .pvideos video { width: 100%; aspect-ratio: 16/9; border-radius: 2px; border: 1px solid var(--line2); background: #000; }
+        .pdemo { margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed var(--line2); }
+        .pdemo-label { font-family: "JetBrains Mono", monospace; font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-text); margin-bottom: .5rem; }
+        .pmedia { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; border-radius: 2px; border: 1px solid var(--line2); background: var(--surface2); }
+        .pmedia-cap { font-family: "JetBrains Mono", monospace; font-size: .68rem; color: var(--ink3); line-height: 1.5; margin-top: .5rem; }
+        .pgallery { display: flex; gap: 8px; flex-wrap: wrap; }
+        .pgallery figure { flex: 1; min-width: 110px; margin: 0; }
+        .pgallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 2px; border: 1px solid var(--line2); display: block; }
+        .pgallery figcaption { font-family: "JetBrains Mono", monospace; font-size: .62rem; color: var(--ink3); margin-top: .4rem; }
+        .pvideos { display: flex; flex-direction: column; gap: 1rem; }
+        .pvideos video { width: 100%; aspect-ratio: 16/9; border-radius: 2px; border: 1px solid var(--line2); background: #000; display: block; }
+        .pvideos figure { margin: 0; }
+        .pvideos figcaption { font-family: "JetBrains Mono", monospace; font-size: .62rem; color: var(--ink3); margin-top: .4rem; }
         .proj-lede { font-family: "JetBrains Mono", monospace; font-size: .68rem; color: var(--ink3); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 2rem; max-width: 60ch; }
         .more-toggle { margin-top: 2.5rem; }
         .more-toggle summary {
@@ -572,6 +581,9 @@
         .hobby { text-align: center; padding: 1.7rem 1.1rem; background: var(--surface); border: 1px solid var(--line); border-radius: 3px; transition: transform .2s, border-color .2s; }
         .hobby:hover { transform: translateY(-3px); border-color: var(--accent); }
         .hobby .ic { font-size: 1.4rem; margin-bottom: .7rem; }
+        .hobby-photo { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin: 0 auto .7rem; display: block; border: 1px solid var(--line2); }
+        .hobby-photo-row { display: flex; justify-content: center; gap: 6px; margin-bottom: .7rem; }
+        .hobby-photo-row .hobby-photo { width: 42px; height: 42px; margin: 0; }
         .hobby .t { font-family: "Archivo", sans-serif; font-weight: 700; font-size: .86rem; margin-bottom: .35rem; }
         .hobby .d { font-size: .76rem; color: var(--ink2); line-height: 1.5; }
 
@@ -673,7 +685,7 @@
                 <div class="plate-bracket tl"></div><div class="plate-bracket tr"></div>
                 <div class="plate-bracket bl"></div><div class="plate-bracket br"></div>
                 <div class="plate-ring"></div>
-                <div class="plate-face">HP</div>
+                <div class="plate-face"><img src="assets/trek1.jpeg" alt="Harshawardhan Patil, trekking"></div>
             </div>
             <div>
                 <p class="plate-id">UNIT HP // REV 2026</p>
@@ -801,6 +813,13 @@
                 <div class="pdesc">Full-stack AD with smart parking. YOLO (88% mAP), sensor fusion, V2X, pure-pursuit control, CAN actuation. Deployed on NVIDIA Jetson hardware. Led an 8-engineer team end to end.</div>
                 <div class="ptags"><span class="ptag">ROS2</span><span class="ptag">C++</span><span class="ptag">Python</span><span class="ptag">YOLO</span><span class="ptag">Jetson</span><span class="ptag">V2X</span></div>
                 <a href="https://github.com/sca7r/work-in-autonomous-driving" target="_blank" class="proj-link">GitHub ↗</a>
+                <div class="pdemo">
+                    <div class="pdemo-label">▸ Hardware &amp; teaser</div>
+                    <video class="pmedia" src="assets/product.mp4" controls preload="metadata"></video>
+                    <p class="pmedia-cap">Project teaser.</p>
+                    <img class="pmedia" style="margin-top:.6rem" src="assets/adapt-hardware.jpeg" alt="ADAPT vehicle compute stack: Jetson, RealSense camera and LiDAR mounted in the chassis" loading="lazy">
+                    <p class="pmedia-cap">Onboard stack: Jetson compute, RealSense depth camera and LiDAR mounted in the 3D-printed chassis.</p>
+                </div>
             </div>
             <div class="pcard" data-tag="EE.TOOL · 0.95">
                 <div class="picon">🔧</div>
@@ -808,6 +827,11 @@
                 <div class="pdesc">ML optimization for SDV architectures. 5-stage pipeline: KD-Tree, Dijkstra, K-means clustering. 62.8% wiring harness reduction on a real electric truck. Built at Daimler AG.</div>
                 <div class="ptags"><span class="ptag">Python</span><span class="ptag">PyQt5</span><span class="ptag">scikit-learn</span><span class="ptag">NetworkX</span><span class="ptag">Dijkstra</span></div>
                 <a href="https://github.com/sca7r/Zonal-convergence-gui" target="_blank" class="proj-link">GitHub ↗</a>
+                <div class="pdemo">
+                    <div class="pdemo-label">▸ Tool</div>
+                    <img class="pmedia" src="assets/convio.jpeg" alt="ConvIO GUI showing the zonal wiring harness network graph" loading="lazy">
+                    <p class="pmedia-cap">The control panel: chassis network graph, clustering controls, and wiring cost/weight comparison against the baseline.</p>
+                </div>
             </div>
             <div class="pcard" data-tag="AGENT · 0.98">
                 <div class="picon">🤖</div>
@@ -829,42 +853,61 @@
                 <div class="pdesc">End-to-end robotic manipulation framework: custom 6-DOF arm, ROS 2 Jazzy, MoveIt 2 motion planning, Gazebo simulation, RGB-D perception, sim-to-real pick-and-place.</div>
                 <div class="ptags"><span class="ptag">ROS 2</span><span class="ptag">MoveIt 2</span><span class="ptag">Gazebo Harmonic</span><span class="ptag">RGB-D Vision</span></div>
                 <a href="https://github.com/sca7r/vision-robotic-arm" target="_blank" class="proj-link">GitHub ↗</a>
+                <div class="pdemo">
+                    <div class="pdemo-label">▸ RViz</div>
+                    <img class="pmedia" src="assets/visionarm.png" alt="Custom 6-DOF robotic arm URDF visualized in RViz with joint-state controls" loading="lazy">
+                    <p class="pmedia-cap">The 6-DOF arm URDF in RViz, joint-by-joint control before it goes into the Gazebo pick-and-place loop.</p>
+                </div>
             </div>
             <div class="pcard" data-tag="PERCEPTION · 0.97">
-                <video class="pmedia" src="assets/depthtrack-sim.mp4" controls preload="metadata"></video>
                 <div class="picon">🚗</div>
                 <div class="pname">DepthTrack — 3D Dashcam Perception</div>
                 <div class="pdesc">Real-time monocular perception pipeline. YOLOv8 detection, Depth Anything V2 depth estimation, ByteTrack tracking, collision-risk scoring, bird's-eye-view rendering, all from a single camera, no LiDAR.</div>
                 <div class="ptags"><span class="ptag">Python</span><span class="ptag">PyTorch</span><span class="ptag">YOLOv8</span><span class="ptag">OpenCV</span><span class="ptag">Transformers</span></div>
                 <a href="https://github.com/sca7r/DepthTrack" target="_blank" class="proj-link">GitHub ↗</a>
+                <div class="pdemo">
+                    <div class="pdemo-label">▸ Demo</div>
+                    <video class="pmedia" src="assets/depthtrack-sim.mp4" controls preload="metadata"></video>
+                    <p class="pmedia-cap">Live run: detection boxes, depth-based distance, and bird's-eye-view all rendered from one dashcam feed.</p>
+                </div>
             </div>
             <div class="pcard" data-tag="CHASSIS · 0.93">
-                <img class="pmedia" src="assets/6wheel.jpeg" alt="Six-wheel all-terrain robotic chassis CAD render" loading="lazy">
                 <div class="picon">⚙️</div>
                 <div class="pname">Six-Wheel All-Terrain Robotic Chassis</div>
                 <div class="pdesc">Modular six-wheel chassis for off-road mobility and future autonomous use. Full CAD assembly: chassis frame, drivetrain, battery enclosure, motor mounts, wheel modules. Built for lightweight packaging and Design for Manufacturing.</div>
                 <div class="ptags"><span class="ptag">SolidWorks</span><span class="ptag">CAD Assembly</span><span class="ptag">DFM</span><span class="ptag">Drivetrain Design</span></div>
+                <div class="pdemo">
+                    <div class="pdemo-label">▸ CAD</div>
+                    <img class="pmedia" src="assets/6wheel.jpeg" alt="Six-wheel all-terrain robotic chassis CAD render" loading="lazy">
+                    <p class="pmedia-cap">Full assembly: rocker-style six-wheel drivetrain, motor mounts, and the battery/electronics enclosure up top.</p>
+                </div>
             </div>
             <div class="pcard" data-tag="EV.CHASSIS · 0.92">
-                <div class="pgallery">
-                    <img src="assets/ev-challenge-1.jpeg" alt="Electric utility vehicle, view 1" loading="lazy">
-                    <img src="assets/ev-challenge-2.jpeg" alt="Electric utility vehicle, view 2" loading="lazy">
-                </div>
                 <div class="picon">🔋</div>
                 <div class="pname">Electric Utility Vehicle</div>
                 <div class="pdesc">Design and analysis of a small EV: chassis, steering, suspension, braking, battery packaging. Backed by engineering calculations for steering geometry, braking, suspension, and battery sizing, validated via CAD and FEA.</div>
                 <div class="ptags"><span class="ptag">SolidWorks</span><span class="ptag">ANSYS</span><span class="ptag">FEA</span><span class="ptag">Suspension Design</span></div>
-            </div>
-            <div class="pcard" data-tag="EV.RETROFIT · 0.91">
-                <div class="pgallery">
-                    <img src="assets/aakruti-side.jpeg" alt="Aakruti universal EV conversion kit, side view" loading="lazy">
-                    <img src="assets/aakruti-top.jpeg" alt="Aakruti universal EV conversion kit, top view" loading="lazy">
-                    <img src="assets/aakruti-1.jpeg" alt="Aakruti universal EV conversion kit" loading="lazy">
+                <div class="pdemo">
+                    <div class="pdemo-label">▸ Built &amp; simulated</div>
+                    <div class="pgallery">
+                        <figure><img src="assets/ev-challenge-1.jpeg" alt="Finished electric utility vehicle prototype" loading="lazy"><figcaption>Finished prototype</figcaption></figure>
+                        <figure><img src="assets/ev-challenge-2.jpeg" alt="Electric utility vehicle chassis frame CAD render" loading="lazy"><figcaption>Chassis frame, CAD</figcaption></figure>
+                    </div>
                 </div>
-                <div class="picon">🔌</div>
-                <div class="pname">Aakruti — Universal EV Conversion Kit</div>
-                <div class="pdesc">Universal electric powertrain conversion kit for retrofitting existing vehicle platforms. CAD packaging of motor, battery, inverter, transfer case, and VCU with centre-of-gravity and structural layout constraints, plus engineering calculations for drivetrain integration, battery placement, and component selection.</div>
-                <div class="ptags"><span class="ptag">SolidWorks</span><span class="ptag">Powertrain Integration</span><span class="ptag">Component Packaging</span></div>
+            </div>
+            <div class="pcard" data-tag="MPC · 0.95">
+                <div class="picon">🏎️</div>
+                <div class="pname">Dynamic Bicycle MPC</div>
+                <div class="pdesc">Real-time autonomous driving controller with iterative MPC, LiDAR perception, Kalman tracking, obstacle avoidance, adaptive speed planning, and CARLA deployment.</div>
+                <div class="ptags"><span class="ptag">Python</span><span class="ptag">MPC</span><span class="ptag">CARLA</span><span class="ptag">CVXPY</span><span class="ptag">LiDAR</span></div>
+                <a href="https://github.com/sca7r/dynamic-car-mpc" target="_blank" class="proj-link">GitHub ↗</a>
+                <div class="pdemo">
+                    <div class="pdemo-label">▸ Sims</div>
+                    <div class="pvideos">
+                        <figure><video src="assets/dynamic-mpc-carla-sim.mp4" controls preload="metadata"></video><figcaption>CARLA closed-loop deployment</figcaption></figure>
+                        <figure><video src="assets/dynamic-mpc-pygame-sim.mp4" controls preload="metadata"></video><figcaption>Pygame kinematic bicycle-model testbed</figcaption></figure>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -879,12 +922,16 @@
                     <a href="https://github.com/sca7r/Local-Embeddings-RAG" target="_blank" class="proj-link">GitHub ↗</a>
                 </div>
                 <div class="pcard">
-                    <video class="pmedia" src="assets/driver-monitor.mp4" controls preload="metadata"></video>
                     <div class="picon">👁</div>
                     <div class="pname">Driver Monitoring System</div>
                     <div class="pdesc">Real-time CV tracking 478 facial + 21 hand landmarks. Eye Aspect Ratio drowsiness detection. FastAPI dashboard with MJPEG streaming &amp; alerts.</div>
                     <div class="ptags"><span class="ptag">Python</span><span class="ptag">OpenCV</span><span class="ptag">MediaPipe</span><span class="ptag">FastAPI</span><span class="ptag">Qt</span></div>
                     <a href="https://github.com/sca7r/hand-and-face-tracking-with-sleep-awake-detection" target="_blank" class="proj-link">GitHub ↗</a>
+                    <div class="pdemo">
+                        <div class="pdemo-label">▸ Demo</div>
+                        <video class="pmedia" src="assets/driver-monitor.mp4" controls preload="metadata"></video>
+                        <p class="pmedia-cap">Live dashboard: landmark tracking and Eye Aspect Ratio flagging drowsiness in real time.</p>
+                    </div>
                 </div>
                 <div class="pcard">
                     <div class="picon">📡</div>
@@ -894,15 +941,18 @@
                     <a href="https://github.com/sca7r/work-in-autonomous-driving" target="_blank" class="proj-link">GitHub ↗</a>
                 </div>
                 <div class="pcard">
-                    <div class="pvideos">
-                        <video src="assets/dynamic-mpc-carla-sim.mp4" controls preload="metadata"></video>
-                        <video src="assets/dynamic-mpc-pygame-sim.mp4" controls preload="metadata"></video>
+                    <div class="picon">🔌</div>
+                    <div class="pname">Aakruti — Universal EV Conversion Kit</div>
+                    <div class="pdesc">Universal electric powertrain conversion kit for retrofitting existing vehicle platforms. CAD packaging of motor, battery, inverter, transfer case, and VCU with centre-of-gravity and structural layout constraints, plus engineering calculations for drivetrain integration, battery placement, and component selection.</div>
+                    <div class="ptags"><span class="ptag">SolidWorks</span><span class="ptag">Powertrain Integration</span><span class="ptag">Component Packaging</span></div>
+                    <div class="pdemo">
+                        <div class="pdemo-label">▸ CAD</div>
+                        <div class="pgallery">
+                            <figure><img src="assets/aakruti-side.jpeg" alt="Aakruti EV conversion kit chassis, side view" loading="lazy"><figcaption>Side view</figcaption></figure>
+                            <figure><img src="assets/aakruti-top.jpeg" alt="Aakruti EV conversion kit, top view showing motor and battery layout" loading="lazy"><figcaption>Top view — motor &amp; battery layout</figcaption></figure>
+                            <figure><img src="assets/aakruti-1.jpeg" alt="Aakruti EV conversion kit, isometric view" loading="lazy"><figcaption>Isometric</figcaption></figure>
+                        </div>
                     </div>
-                    <div class="picon">🏎️</div>
-                    <div class="pname">Dynamic Bicycle MPC</div>
-                    <div class="pdesc">Real-time autonomous driving controller with iterative MPC, LiDAR perception, Kalman tracking, obstacle avoidance, adaptive speed planning, and CARLA deployment.</div>
-                    <div class="ptags"><span class="ptag">Python</span><span class="ptag">MPC</span><span class="ptag">CARLA</span><span class="ptag">CVXPY</span><span class="ptag">LiDAR</span></div>
-                    <a href="https://github.com/sca7r/dynamic-car-mpc" target="_blank" class="proj-link">GitHub ↗</a>
                 </div>
                 <div class="pcard">
                     <div class="picon">🛑</div>
@@ -949,9 +999,9 @@
             <span class="sheet-meta">Off-duty.log</span>
         </div>
         <div class="hobby-grid">
-            <div class="hobby"><div class="ic">⚽</div><div class="t">Football</div><div class="d">Playing Kreisliga in Germany. Former captain &amp; Player of the Match at Reliance Cup.</div></div>
-            <div class="hobby"><div class="ic">🏔</div><div class="t">Trekking &amp; Extreme Sports</div><div class="d">Mountains, altitude, skydiving, scuba diving, and questionable decisions at high speeds.</div></div>
-            <div class="hobby"><div class="ic">🏃</div><div class="t">Running</div><div class="d">Chasing PRs and sunrise views through Stuttgart's trails.</div></div>
+            <div class="hobby"><img class="hobby-photo" src="assets/football.jpeg" alt="Playing football" loading="lazy"><div class="t">Football</div><div class="d">Playing Kreisliga in Germany. Former captain &amp; Player of the Match at Reliance Cup.</div></div>
+            <div class="hobby"><div class="hobby-photo-row"><img class="hobby-photo" src="assets/skydiving.jpeg" alt="Skydiving" loading="lazy"><img class="hobby-photo" src="assets/scubadiving.jpeg" alt="Scuba diving" loading="lazy"><img class="hobby-photo" src="assets/bungee.jpeg" alt="Bungee jumping" loading="lazy"></div><div class="t">Trekking &amp; Extreme Sports</div><div class="d">Mountains, altitude, skydiving, scuba diving, and questionable decisions at high speeds.</div></div>
+            <div class="hobby"><img class="hobby-photo" src="assets/running.jpeg" alt="Running" loading="lazy"><div class="t">Running</div><div class="d">Chasing PRs and sunrise views through Stuttgart's trails.</div></div>
             <div class="hobby"><div class="ic">✈️</div><div class="t">Exploring</div><div class="d">Always planning the next trip across Europe.</div></div>
             <div class="hobby"><div class="ic">🍳</div><div class="t">Cooking</div><div class="d">Indian spices meet German efficiency, experimental kitchen engineer.</div></div>
             <div class="hobby"><div class="ic">💻</div><div class="t">Building Stuff</div><div class="d">Side projects, hobby robots, and this very portfolio.</div></div>
