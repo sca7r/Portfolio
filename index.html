@@ -42,7 +42,8 @@
 
     <script>
         var saved = localStorage.getItem('theme');
-        document.documentElement.setAttribute('data-theme', saved === 'dark' ? 'dark' : 'light');
+        var prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', saved ? saved : (prefersDark ? 'dark' : 'light'));
     </script>
 
     <style>
@@ -649,6 +650,8 @@
             .skills-grid, .proj-grid, .edu-grid { grid-template-columns: 1fr; }
         }
     </style>
+
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "01a2c1a68eeb436b8fc701a3a16f463d"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
     <div id="grid">
@@ -693,6 +696,7 @@
     </nav>
     <div id="ruler"></div>
 
+    <main>
     <section id="hero">
         <p class="hero-eyebrow rise" style="animation-delay:.05s">AI <span class="sep">·</span> Mechanical <span class="sep">·</span> Robotics <span class="sep">·</span> Automotive Systems Engineer <span class="sep">·</span> Stuttgart, DE</p>
         <h1 class="hero-name">
@@ -849,7 +853,7 @@
                 <div class="pname">ADAPT - Autonomous Vehicle</div>
                 <div class="pdesc">Full-stack AD with smart parking. YOLO (88% mAP), sensor fusion, V2X, pure-pursuit control, CAN actuation. Deployed on NVIDIA Jetson hardware. Led an 8-engineer team end to end.</div>
                 <div class="ptags"><span class="ptag">ROS2</span><span class="ptag">C++</span><span class="ptag">Python</span><span class="ptag">YOLO</span><span class="ptag">Jetson</span><span class="ptag">V2X</span></div>
-                <a href="https://github.com/sca7r/work-in-autonomous-driving" target="_blank" class="proj-link">GitHub ↗</a>
+                <a href="https://github.com/sca7r/work-in-autonomous-driving" target="_blank" class="proj-link" aria-label="View ADAPT - Autonomous Vehicle on GitHub">GitHub ↗</a>
                 <div class="pdemo">
                     <div class="pdemo-label">▸ Hardware &amp; teaser</div>
                     <video class="pmedia" src="assets/product.mp4" controls preload="metadata"></video>
@@ -863,7 +867,7 @@
                 <div class="pname">ConvIO - Zonal E/E Tool</div>
                 <div class="pdesc">ML optimization for SDV architectures. 5-stage pipeline: KD-Tree, Dijkstra, K-means clustering. 62.8% wiring harness reduction on a real electric truck. Built at Daimler AG.</div>
                 <div class="ptags"><span class="ptag">Python</span><span class="ptag">PyQt5</span><span class="ptag">scikit-learn</span><span class="ptag">NetworkX</span><span class="ptag">Dijkstra</span></div>
-                <a href="https://github.com/sca7r/Zonal-convergence-gui" target="_blank" class="proj-link">GitHub ↗</a>
+                <a href="https://github.com/sca7r/Zonal-convergence-gui" target="_blank" class="proj-link" aria-label="View ConvIO - Zonal E/E Tool on GitHub">GitHub ↗</a>
                 <div class="pdemo">
                     <div class="pdemo-label">▸ Tool</div>
                     <img class="pmedia" src="assets/convio.jpeg" alt="ConvIO GUI showing the zonal wiring harness network graph" loading="lazy">
@@ -875,7 +879,7 @@
                 <div class="pname">LokalAgent - Agentic AI</div>
                 <div class="pdesc">Local privacy-first MoE AI system. ReAct reasoning, dynamic RAM management (8–10 GB), tool orchestration. Runs fully offline on consumer hardware.</div>
                 <div class="ptags"><span class="ptag">Python</span><span class="ptag">LangChain</span><span class="ptag">Ollama</span><span class="ptag">Docker</span><span class="ptag">REST APIs</span></div>
-                <a href="https://github.com/sca7r/LokalAgent--Local-Agentic-AI-with-Ollama-LangChain" target="_blank" class="proj-link">GitHub ↗</a>
+                <a href="https://github.com/sca7r/LokalAgent--Local-Agentic-AI-with-Ollama-LangChain" target="_blank" class="proj-link" aria-label="View LokalAgent - Agentic AI on GitHub">GitHub ↗</a>
                 <div class="pdemo">
                     <div class="pdemo-label">▸ UI</div>
                     <img class="pmedia" src="assets/lokalagent-3.jpg" alt="LokalAgent chat interface landing screen" loading="lazy">
@@ -889,7 +893,7 @@
                 <div class="pname">Claims Copilot - AI Context Engineering</div>
                 <div class="pdesc">AI copilot for insurance claims handlers, built on context engineering principles. Skill-based routing, regulatory guardrails, streaming inference, and a fully local eval pipeline with Claude-as-judge scoring across 18 adversarial test cases.</div>
                 <div class="ptags"><span class="ptag">Python</span><span class="ptag">Ollama</span><span class="ptag">deepseek-r1</span><span class="ptag">Streamlit</span><span class="ptag">Context Engineering</span><span class="ptag">LLM Evals</span></div>
-                <a href="https://github.com/sca7r/claims-copilot" target="_blank" class="proj-link">GitHub ↗</a>
+                <a href="https://github.com/sca7r/claims-copilot" target="_blank" class="proj-link" aria-label="View Claims Copilot - AI Context Engineering on GitHub">GitHub ↗</a>
                 <div class="pdemo">
                     <div class="pdemo-label">▸ Repo</div>
                     <div class="pdemo-empty">Walkthrough in the repo README</div>
@@ -900,7 +904,7 @@
                 <div class="pname">Vision-Guided Robotic Manipulation</div>
                 <div class="pdesc">End-to-end robotic manipulation framework: custom 6-DOF arm, ROS 2 Jazzy, MoveIt 2 motion planning, Gazebo simulation, RGB-D perception, sim-to-real pick-and-place.</div>
                 <div class="ptags"><span class="ptag">ROS 2</span><span class="ptag">MoveIt 2</span><span class="ptag">Gazebo Harmonic</span><span class="ptag">RGB-D Vision</span></div>
-                <a href="https://github.com/sca7r/vision-robotic-arm" target="_blank" class="proj-link">GitHub ↗</a>
+                <a href="https://github.com/sca7r/vision-robotic-arm" target="_blank" class="proj-link" aria-label="View Vision-Guided Robotic Manipulation on GitHub">GitHub ↗</a>
                 <div class="pdemo">
                     <div class="pdemo-label">▸ RViz</div>
                     <img class="pmedia" src="assets/visionarm.png" alt="Custom 6-DOF robotic arm URDF visualized in RViz with joint-state controls" loading="lazy">
@@ -912,7 +916,7 @@
                 <div class="pname">DepthTrack - 3D Dashcam Perception</div>
                 <div class="pdesc">Real-time monocular perception pipeline. YOLOv8 detection, Depth Anything V2 depth estimation, ByteTrack tracking, collision-risk scoring, bird's-eye-view rendering, all from a single camera, no LiDAR.</div>
                 <div class="ptags"><span class="ptag">Python</span><span class="ptag">PyTorch</span><span class="ptag">YOLOv8</span><span class="ptag">OpenCV</span><span class="ptag">Transformers</span></div>
-                <a href="https://github.com/sca7r/DepthTrack" target="_blank" class="proj-link">GitHub ↗</a>
+                <a href="https://github.com/sca7r/DepthTrack" target="_blank" class="proj-link" aria-label="View DepthTrack - 3D Dashcam Perception on GitHub">GitHub ↗</a>
                 <div class="pdemo">
                     <div class="pdemo-label">▸ Demo</div>
                     <video class="pmedia" src="assets/depthtrack-sim.mp4" controls preload="metadata"></video>
@@ -948,7 +952,7 @@
                 <div class="pname">Dynamic Bicycle MPC</div>
                 <div class="pdesc">Real-time autonomous driving controller with iterative MPC, LiDAR perception, Kalman tracking, obstacle avoidance, adaptive speed planning, and CARLA deployment.</div>
                 <div class="ptags"><span class="ptag">Python</span><span class="ptag">MPC</span><span class="ptag">CARLA</span><span class="ptag">CVXPY</span><span class="ptag">LiDAR</span></div>
-                <a href="https://github.com/sca7r/dynamic-car-mpc" target="_blank" class="proj-link">GitHub ↗</a>
+                <a href="https://github.com/sca7r/dynamic-car-mpc" target="_blank" class="proj-link" aria-label="View Dynamic Bicycle MPC on GitHub">GitHub ↗</a>
                 <div class="pdemo">
                     <div class="pdemo-label">▸ Sims</div>
                     <div class="pvideos">
@@ -967,7 +971,7 @@
                     <div class="pname">Local RAG for PDFs</div>
                     <div class="pdesc">Document Q&amp;A with local LLMs, Qdrant vector DB, Docker. ONNX INT8 quantized cross-encoder for 3–4x speedup. Server-Sent Events for real-time streaming.</div>
                     <div class="ptags"><span class="ptag">Python</span><span class="ptag">FastAPI</span><span class="ptag">Qdrant</span><span class="ptag">Docker</span><span class="ptag">ONNX</span></div>
-                    <a href="https://github.com/sca7r/Local-Embeddings-RAG" target="_blank" class="proj-link">GitHub ↗</a>
+                    <a href="https://github.com/sca7r/Local-Embeddings-RAG" target="_blank" class="proj-link" aria-label="View Local RAG for PDFs on GitHub">GitHub ↗</a>
                     <div class="pdemo">
                         <div class="pdemo-label">▸ UI</div>
                         <img class="pmedia" src="assets/local-rag-1.jpg" alt="Local RAG assistant answering a question over an uploaded PDF" loading="lazy">
@@ -981,10 +985,10 @@
                     <div class="pname">Driver Monitoring System</div>
                     <div class="pdesc">Real-time CV tracking 478 facial + 21 hand landmarks. Eye Aspect Ratio drowsiness detection. FastAPI dashboard with MJPEG streaming &amp; alerts.</div>
                     <div class="ptags"><span class="ptag">Python</span><span class="ptag">OpenCV</span><span class="ptag">MediaPipe</span><span class="ptag">FastAPI</span><span class="ptag">Qt</span></div>
-                    <a href="https://github.com/sca7r/hand-and-face-tracking-with-sleep-awake-detection" target="_blank" class="proj-link">GitHub ↗</a>
+                    <a href="https://github.com/sca7r/hand-and-face-tracking-with-sleep-awake-detection" target="_blank" class="proj-link" aria-label="View Driver Monitoring System on GitHub">GitHub ↗</a>
                     <div class="pdemo">
                         <div class="pdemo-label">▸ Demo</div>
-                        <video class="pmedia" src="assets/driver-monitor.mp4" controls preload="metadata"></video>
+                        <video class="pmedia" src="assets/driver-monitor.mp4" controls preload="none"></video>
                         <p class="pmedia-cap">Live dashboard: landmark tracking and Eye Aspect Ratio flagging drowsiness in real time.</p>
                     </div>
                 </div>
@@ -993,7 +997,7 @@
                     <div class="pname">Multi-Sensor Fusion</div>
                     <div class="pdesc">LiDAR-camera fusion for object detection. Temporal sync &amp; spatial alignment. Enhanced reliability under dynamic lighting.</div>
                     <div class="ptags"><span class="ptag">C++</span><span class="ptag">Python</span><span class="ptag">LiDAR</span><span class="ptag">Sensor Fusion</span></div>
-                    <a href="https://github.com/sca7r/work-in-autonomous-driving" target="_blank" class="proj-link">GitHub ↗</a>
+                    <a href="https://github.com/sca7r/work-in-autonomous-driving" target="_blank" class="proj-link" aria-label="View Multi-Sensor Fusion on GitHub">GitHub ↗</a>
                     <div class="pdemo">
                         <div class="pdemo-label">▸ RViz</div>
                         <img class="pmedia" src="assets/multi-sensor-fusion.png" alt="RViz view of fused LiDAR and camera detections around the vehicle" loading="lazy">
@@ -1019,7 +1023,7 @@
                     <div class="pname">Autonomous Emergency Braking</div>
                     <div class="pdesc">Real-time AEB with LiDAR obstacle detection &amp; distance estimation. Braking decision logic with data logging &amp; performance evaluation.</div>
                     <div class="ptags"><span class="ptag">Python</span><span class="ptag">LiDAR</span><span class="ptag">Safety Systems</span></div>
-                    <a href="https://github.com/sca7r/work-in-autonomous-driving" target="_blank" class="proj-link">GitHub ↗</a>
+                    <a href="https://github.com/sca7r/work-in-autonomous-driving" target="_blank" class="proj-link" aria-label="View Autonomous Emergency Braking on GitHub">GitHub ↗</a>
                     <div class="pdemo">
                         <div class="pdemo-label">▸ Trigger &amp; RViz</div>
                         <img class="pmedia" src="assets/aeb-rviz.png" alt="RViz view of AEB obstacle detections and path in front of the vehicle" loading="lazy">
@@ -1033,12 +1037,12 @@
                     <div class="pname">Trajectory Planning &amp; Parking</div>
                     <div class="pdesc">Waypoint pathfinding with parking maneuvers. Real-time obstacle avoidance via multi-sensor fusion. Smooth transitions &amp; space alignment.</div>
                     <div class="ptags"><span class="ptag">Python</span><span class="ptag">ROS2</span><span class="ptag">Path Planning</span></div>
-                    <a href="https://github.com/sca7r/work-in-autonomous-driving/tree/main/trajectory" target="_blank" class="proj-link">GitHub ↗</a>
+                    <a href="https://github.com/sca7r/work-in-autonomous-driving/tree/main/trajectory" target="_blank" class="proj-link" aria-label="View Trajectory Planning &amp; Parking on GitHub">GitHub ↗</a>
                     <div class="pdemo">
                         <div class="pdemo-label">▸ Sims</div>
                         <div class="pvideos">
-                            <figure><video class="pmedia" src="assets/trajectory.mp4" controls preload="metadata"></video><figcaption>Waypoint pathfinding with real-time obstacle avoidance.</figcaption></figure>
-                            <figure><video class="pmedia" src="assets/parking.mp4" controls preload="metadata"></video><figcaption>Parking maneuver: smooth transitions into the target space.</figcaption></figure>
+                            <figure><video class="pmedia" src="assets/trajectory.mp4" controls preload="none"></video><figcaption>Waypoint pathfinding with real-time obstacle avoidance.</figcaption></figure>
+                            <figure><video class="pmedia" src="assets/parking.mp4" controls preload="none"></video><figcaption>Parking maneuver: smooth transitions into the target space.</figcaption></figure>
                         </div>
                     </div>
                 </div>
@@ -1047,7 +1051,7 @@
                     <div class="pname">V2X Transceiver Module</div>
                     <div class="pdesc">ETSI ITS messaging hub (CAM, CPM, EVCSN). Serialization over ROS2 with low latency &amp; robust error handling for infrastructure-vehicle comms.</div>
                     <div class="ptags"><span class="ptag">C++</span><span class="ptag">ROS2</span><span class="ptag">V2X</span><span class="ptag">ETSI ITS</span></div>
-                    <a href="https://github.com/sca7r/work-in-autonomous-driving/tree/main/transceiver" target="_blank" class="proj-link">GitHub ↗</a>
+                    <a href="https://github.com/sca7r/work-in-autonomous-driving/tree/main/transceiver" target="_blank" class="proj-link" aria-label="View V2X Transceiver Module on GitHub">GitHub ↗</a>
                     <div class="pdemo">
                         <div class="pdemo-label">▸ Field test</div>
                         <img class="pmedia" src="assets/v2x-field-test.jpeg" alt="Field-testing the V2X transceiver rig with a roadside unit antenna, on a laptop outdoors" loading="lazy">
@@ -1061,7 +1065,7 @@
                     <div class="pname">Requirements Tracker - Full-Stack System</div>
                     <div class="pdesc">Requirements management platform with MoSCoW prioritization, lifecycle workflows, and effort estimation. Built on ASP.NET Core and React with a strongly typed API contract.</div>
                     <div class="ptags"><span class="ptag">ASP.NET Core</span><span class="ptag">C#</span><span class="ptag">React</span><span class="ptag">TypeScript</span><span class="ptag">PostgreSQL</span></div>
-                    <a href="https://github.com/sca7r/Requirements-Tracker" target="_blank" class="proj-link">GitHub ↗</a>
+                    <a href="https://github.com/sca7r/Requirements-Tracker" target="_blank" class="proj-link" aria-label="View Requirements Tracker - Full-Stack System on GitHub">GitHub ↗</a>
                     <div class="pdemo">
                         <div class="pdemo-label">▸ Repo</div>
                         <div class="pdemo-empty">Walkthrough in the repo README</div>
@@ -1120,6 +1124,7 @@
             </a>
         </div>
     </section>
+    </main>
 
     <footer>
         <p>Designed &amp; built by <span>Harsh Patil</span> · Stuttgart, Germany · 2026</p>
