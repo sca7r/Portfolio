@@ -5,6 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harsh Patil: AI, Mechanical & Robotics Engineer</title>
     <meta name="description" content="Harshawardhan Patil: AI · Mechanical · Robotics · Automotive Systems Engineer, Stuttgart, Germany.">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2216%22 fill=%22%23141414%22/><text x=%2250%22 y=%2268%22 font-family=%22Arial,sans-serif%22 font-weight=%22900%22 font-size=%2255%22 fill=%22%23e0632a%22 text-anchor=%22middle%22>H</text></svg>">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Harsh Patil: AI, Mechanical & Robotics Engineer">
+    <meta property="og:description" content="Harshawardhan Patil: AI · Mechanical · Robotics · Automotive Systems Engineer, Stuttgart, Germany.">
+    <meta property="og:url" content="https://sca7r.github.io/Portfolio/">
+    <meta property="og:image" content="https://sca7r.github.io/Portfolio/assets/trek1.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Harsh Patil: AI, Mechanical & Robotics Engineer">
+    <meta name="twitter:description" content="Harshawardhan Patil: AI · Mechanical · Robotics · Automotive Systems Engineer, Stuttgart, Germany.">
+    <meta name="twitter:image" content="https://sca7r.github.io/Portfolio/assets/trek1.jpeg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Harshawardhan Patil",
+        "alternateName": "Harsh Patil",
+        "url": "https://sca7r.github.io/Portfolio/",
+        "image": "https://sca7r.github.io/Portfolio/assets/trek1.jpeg",
+        "jobTitle": "AI, Mechanical & Robotics Engineer",
+        "address": { "@type": "PostalAddress", "addressLocality": "Stuttgart", "addressCountry": "DE" },
+        "alumniOf": "Hochschule Coburg",
+        "sameAs": [
+            "https://www.linkedin.com/in/ha7shpatil",
+            "https://github.com/sca7r"
+        ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,700;0,800;0,900;1,700&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -227,7 +258,7 @@
         }
         .theme-btn:hover { border-color: var(--accent); color: var(--accent-text); }
 
-        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; font: inherit; }
         .hamburger span { width: 20px; height: 1.5px; background: var(--ink2); display: block; }
 
         /* ---------- layout primitives ---------- */
@@ -651,13 +682,13 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div style="display:flex;align-items:center;gap:10px;flex-shrink:0">
-            <button class="theme-btn" onclick="toggleTheme()">
-                <span id="tIcon">☾</span>
+            <button class="theme-btn" onclick="toggleTheme()" aria-pressed="false" aria-label="Toggle dark mode">
+                <span id="tIcon" aria-hidden="true">☾</span>
                 <span id="tLabel">Dark</span>
             </button>
-            <div class="hamburger" onclick="toggleMenu()">
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
                 <span></span><span></span><span></span>
-            </div>
+            </button>
         </div>
     </nav>
     <div id="ruler"></div>
@@ -1125,10 +1156,12 @@
 
         // theme toggle
         var h = document.documentElement, tIcon = document.getElementById("tIcon"), tLabel = document.getElementById("tLabel");
+        var themeBtn = document.querySelector(".theme-btn");
         function syncThemeBtn() {
             var dark = h.getAttribute("data-theme") === "dark";
             tIcon.textContent = dark ? "☀" : "☾";
             tLabel.textContent = dark ? "Light" : "Dark";
+            themeBtn.setAttribute("aria-pressed", dark);
         }
         function toggleTheme() {
             var newTheme = h.getAttribute("data-theme") === "dark" ? "light" : "dark";
@@ -1139,7 +1172,10 @@
         syncThemeBtn();
 
         // mobile menu
-        function toggleMenu() { document.getElementById("navLinks").classList.toggle("open"); }
+        function toggleMenu() {
+            var open = document.getElementById("navLinks").classList.toggle("open");
+            document.querySelector(".hamburger").setAttribute("aria-expanded", open);
+        }
 
         // nav active state
         var secs = document.querySelectorAll("section[id]");
@@ -1149,7 +1185,10 @@
             secs.forEach(function (s) { if (scrollY >= s.offsetTop - 140) c = s.id; });
             navA.forEach(function (a) { a.classList.toggle("active", a.getAttribute("href") === "#" + c); });
         }, { passive: true });
-        navA.forEach(function (a) { a.addEventListener("click", function () { document.getElementById("navLinks").classList.remove("open"); }); });
+        navA.forEach(function (a) { a.addEventListener("click", function () {
+            document.getElementById("navLinks").classList.remove("open");
+            document.querySelector(".hamburger").setAttribute("aria-expanded", "false");
+        }); });
 
         // stat count-up
         var statEls = document.querySelectorAll(".stat-num");
