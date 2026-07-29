@@ -565,6 +565,10 @@
         .picon { width: 40px; height: 40px; border-radius: 2px; background: var(--surface2); border: 1px solid var(--line2); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 1.15rem; }
         .pdemo { margin-top: auto; padding-top: 1rem; border-top: 1px dashed var(--line2); }
         .pdemo-label { font-family: "JetBrains Mono", monospace; font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-text); margin-bottom: .5rem; }
+        #promoDialog { width: min(90vw, 960px); padding: 0; border: 1px solid var(--line2); background: var(--surface2); }
+        #promoDialog video { width: 100%; display: block; background: #000; }
+        #promoDialog .btn { margin: .8rem; }
+        #promoDialog::backdrop { background: rgba(0,0,0,.7); }
         .pmedia { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; border-radius: 2px; border: 1px solid var(--line2); background: var(--surface2); }
         video.pmedia { object-fit: contain; background: #000; }
         .pdemo-empty { width: 100%; aspect-ratio: 16/9; border: 1px dashed var(--line2); border-radius: 2px; background: var(--surface2); display: flex; align-items: center; justify-content: center; font-family: "JetBrains Mono", monospace; font-size: .68rem; color: var(--ink3); text-align: center; padding: 0 1rem; }
@@ -710,6 +714,7 @@
         <div class="hero-ctas rise" style="animation-delay:.7s">
             <a href="#contact" class="btn btn-primary">Get in touch</a>
             <a href="#projects" class="btn btn-ghost">See my work</a>
+            <button type="button" class="btn btn-ghost" onclick="promoDialog.showModal()">Watch promo</button>
         </div>
         <div class="hero-readout rise" style="animation-delay:.85s">
             <span>LOC <b>48.7758° N, 9.1829° E</b></span>
@@ -717,6 +722,11 @@
             <span>VISA <b>Post-study, DE</b></span>
         </div>
     </section>
+
+    <dialog id="promoDialog">
+        <video src="assets/promo.mp4" controls></video>
+        <button type="button" class="btn btn-ghost" onclick="promoDialog.close()">Close</button>
+    </dialog>
 
     <section id="about" class="wrap">
         <div class="plate-wrap">
